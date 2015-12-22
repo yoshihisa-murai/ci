@@ -1,0 +1,8 @@
+body {
+	font-size:12px;
+}
+
+.valid_error {
+	font-size:11px;
+	color:#f00;
+}
