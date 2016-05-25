@@ -20,6 +20,7 @@ class MY_Controller extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->library( 'user_agent' );
         $this->smarty->template_dir = APPPATH . 'views/templates';
         $this->smarty->compile_dir  = APPPATH . 'views/templates_c';
         $this->template = 'layout.tpl';
@@ -37,9 +38,19 @@ class MY_Controller extends CI_Controller {
      * テンプレート共通化
      */
     public function view( $template ) {
-        $this->smarty->assign( 'content_tpl', strtolower( get_class( $this ) ) . '/' . $template . '.tpl' );
+        if ( $this->agent->is_mobile() ) {
+            $agent_template = 'sp/' . $template;
+        } else {
+            $agent_template = 'pc/' . $template;
+        }
+        $this->smarty->assign( 'content_tpl', strtolower( get_class( $this ) ) . '/' . $agent_template . '.tpl' );
         $this->smarty->assign( 'page_title', $this->_config[strtolower( get_class( $this ) )][$template] );
-        $this->template = "common/layout.tpl";
+
+        if ( $this->agent->is_mobile() ) {
+            $this->template = "common/sp/layout.tpl";
+        } else {
+            $this->template = "common/pc/layout.tpl";
+        }
     }
 
     // }}}
@@ -112,6 +123,7 @@ class MY_Controller extends CI_Controller {
     }
 
     // }}}
+
 }
 /**
  * Local variables:

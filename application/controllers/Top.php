@@ -27,6 +27,7 @@ class Top extends MY_Controller {
     {
         $this->smarty->assign( 'is_login', $this->_is_login );
         $this->smarty->assign( 'user', $this->_user );
+        $this->smarty->assign( 'form_style', array( 'style' => 'margin-top:10px;' ) );
         $this->view( __FUNCTION__ );
     }
 

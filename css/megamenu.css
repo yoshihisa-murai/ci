@@ -1,0 +1,105 @@
+.mega-menu {
+	color: #888;
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	visibility: hidden;
+	height: 0;
+	z-index: 99999;
+	text-align: left;
+}
+li:hover > .mega-menu {
+	opacity: 1;
+	box-shadow: rgba(0,0,0,0.03) 0px 2px 2px 1px;
+	-webkit-box-shadow: rgba(0,0,0,0.03) 0px 2px 2px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.03) 0px 2px 2px 1px;
+	-ms-box-shadow: rgba(0,0,0,0.03) 0px 2px 2px 1px;
+	-o-box-shadow: rgba(0,0,0,0.03) 0px 2px 2px 1px;
+	overflow: visible;
+	visibility: visible;
+	height: auto;
+}
+.mega-menu .container-inner {
+	padding: 20px;
+	background: #222!important;
+	margin: 0 auto;
+}
+.mcell {
+	float: left;
+}
+.megamenu1 {
+	width: 40%;
+}
+.megamenu2, .megamenu3 {
+	width: 30%;
+	box-sizing: border-box;
+}
+.megamenu_column {
+	clear: both;
+	padding: 5px;
+	box-sizing: border-box;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	
+}
+.megamenu2 .megamenu_column, .megamenu3 .megamenu_column {
+	border-bottom: rgba(255,255,255,0.10) 1px solid;
+}
+.megamenu_column a {
+	color: #787878;
+}
+.megamenu_thumb {
+	-webkit-transition: all .3s ease-in;
+	-moz-transition: all .3s ease-in;
+	-ms-transition: all .3s ease-in;
+	overflow: hidden;
+}
+.megamenu1 .megamenu_thumb {
+	max-width: 100%;
+	height: auto;-webkit-backface-visibility: hidden;backface-visibility: hidden;
+}
+.megamenu2 .megamenu_thumb, .megamenu3 .megamenu_thumb {
+	max-width: 70px;
+	max-height: 70px;
+}
+.megamenu2 .megamenu_content, .megamenu3 .megamenu_content {
+	padding-left: 80px;
+}
+.mega-menu h2 {
+	-webkit-transition: all .6s ease-out;
+	-moz-transition: all .6s ease-out;
+	-ms-transition: all .6s ease-out;
+	font-size: 12px;
+	font-weight: 200;
+	margin: 0px 0 10px 0;
+	display: inline!important;
+}
+.mega-menu .date, .mega-menu .excerpt {
+	font-size: 12px;
+}
+li.menu-item-object-megamenu .mega-menu a:hover {
+	background: none!important;
+}
+li.menu-item-object-megamenu .mega-menu a {
+	padding: 0;
+}
+.megamenu_column:hover .megamenu_thumb {
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+}
+.megamenu_column img {
+	height: auto;-webkit-backface-visibility: hidden;backface-visibility: hidden;
+
+}
+.thumb-outer {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.thumb-outer2 {
+	float: left;
+	width: 70px;
+	overflow: hidden;
+}

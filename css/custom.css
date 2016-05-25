@@ -1,0 +1,27 @@
+/* 
+style.cssに、このカスタムcssが上書きされます。
+この機能を利用することで、オリジナルのテーマを書き換えることなく、カスタマイズcssを追加できます。
+テーマがアップデートされても、カスタムしたスタイルが変更されることがありません。
+
+*/
+
+/* 共通設定 */
+.mystyle {}
+
+
+/* タブレット - 737px < 1024px */
+@media only screen and (min-width: 739px) and (max-width: 1024px) {
+	.mystyle {}
+}
+
+
+/*　モバイル(iPhone6+) - < 736px */
+@media only screen and (max-width: 738px) {
+	.mystyle {}
+}
+
+
+/* モバイル -  < 480px */
+@media only screen and (max-width: 479px) {
+	.mystyle {}
+}
