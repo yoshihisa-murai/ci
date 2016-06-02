@@ -33,7 +33,58 @@ class Signup extends MY_Controller {
         // バリデーションエラー時にテキストエリアのデータを保持
         $post = $this->input->post();
         $input['user_email'] = ( isset( $post['user_email'] ) ) ? $post['user_email'] : null;
+        $input['c_user_email'] = ( isset( $post['c_user_email'] ) ) ? $post['c_user_email'] : null;
         $input['nickname'] = ( isset( $post['nickname'] ) ) ? $post['nickname'] : null;
+        $input['name1'] = ( isset( $post['name1'] ) ) ? $post['name1'] : null;
+        $input['name2'] = ( isset( $post['name2'] ) ) ? $post['name2'] : null;
+        $input['birth_year'] = ( isset( $post['birth_year'] ) ) ? $post['birth_year'] : null;
+        $input['birth_month'] = ( isset( $post['birth_month'] ) ) ? $post['birth_month'] : null;
+        $input['birth_date'] = ( isset( $post['birth_date'] ) ) ? $post['birth_date'] : null;
+        $input['mobile1'] = ( isset( $post['mobie1'] ) ) ? $post['mobile1'] : null;
+        $input['mobile2'] = ( isset( $post['mobie2'] ) ) ? $post['mobile2'] : null;
+        $input['mobile3'] = ( isset( $post['mobie3'] ) ) ? $post['mobile3'] : null;
+        $input['add_no1'] = ( isset( $post['add_no1'] ) ) ? $post['add_no1'] : null;
+        $input['add_no2'] = ( isset( $post['add_no2'] ) ) ? $post['add_no2'] : null;
+
+        $form_attr['birth_day'] = array(
+            'birth_year' => array( 
+                'name' => 'birth_year',
+                'style' => 'width:50px'
+            ),
+            'birth_month' => array( 
+                'name' => 'birth_month',
+                'style' => 'width:30px'
+            ),
+            'birth_date' => array( 
+                'name' => 'birth_date',
+                'style' => 'width:30px'
+            ),
+        );
+        $form_attr['mobile'] = array(
+            'mobile1' => array( 
+                'name' => 'mobile1',
+                'style' => 'width:30px'
+            ),
+            'mobile2' => array( 
+                'name' => 'mobile2',
+                'style' => 'width:50px'
+            ),
+            'mobile3' => array( 
+                'name' => 'mobile3',
+                'style' => 'width:50px'
+            ),
+        );
+        $form_attr['addr'] = array(
+            'add_no1' => array( 
+                'name' => 'add_no1',
+                'style' => 'width:30px'
+            ),
+            'add_no2' => array( 
+                'name' => 'add_no2',
+                'style' => 'width:50px'
+            ),
+        );
+
 
         $is_posted = false;
         if ( $post ) {
@@ -56,6 +107,7 @@ class Signup extends MY_Controller {
                 $this->my_mail->mail_send( $post['user_email'], my_const::MAIL_SUBJECT_PREREGIST, $message );
             }
         }
+        $this->smarty->assign( 'form_attr', $form_attr );
         $this->smarty->assign( 'is_posted', $is_posted );
         $this->smarty->assign( 'input', $input ); 
         $this->view( __FUNCTION__ );

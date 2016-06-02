@@ -1,0 +1,101 @@
+.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+/* Dynamic CSS: For no styles in head, copy and put the css below in your custom.css or child theme's style.css, disable dynamic styles */
+.boxed #wrapper,.boxed header, .container-inner,.boxed #header { max-width: 1200px; }
+	
+	.comment-tabs li.active a 
+	{border-bottom:2px solid #333!important;
+ }	
+ 			
+				
+
+.s2 .post-nav li a:hover i,
+.s2 .widget_rss ul li a,
+.s2 .widget_calendar a,
+.s2 .alx-posts .post-item-category a,
+.s2 .alx-tab li:hover .tab-item-title a,
+.s2 .alx-tab li:hover .tab-item-comment a,
+.s2 .alx-posts li:hover .post-item-title a { color: ; }
+
+.s2 .sidebar-top,
+.s2 .sidebar-toggle,
+.jp-play-bar,
+.jp-volume-bar-value,
+.s2 .widget_calendar caption,#readmore a ,.post-thumb-category ,.rank_num { background-color: ; }
+
+.s2 .alx-tabs-nav li.active a { border-bottom-color: ; }
+			
+				
+
+		.feature_meta h2,h2.widgettitle,h1.page-title ,h1.post-title ,.site-title {font-family: "Noto Sans Japanese", sans-serif;}				
+				
+body {font-weight:100;}
+@media only screen and (max-width: 738px) { .page-image {margin-top:50px;}}
+@media only screen and (max-width: 738px) { .page-image {margin-top:50px;}}
+body ,.post-title a { color: #777; }
+#footer { background-color: #222222; }
+.site-title a img { max-height: 40px; }
+body { background-color: #000000; }
+
+h1.post-title { 
+color:#ffffff;
+font-size:;
+font-weight:;
+letter-spacing:;
+line-height:;
+padding-top:;
+ }
+
+.entry h1  { 
+color:#ffffff;
+font-size:;
+font-weight:;
+letter-spacing:;
+line-height:;
+padding-top:;
+ }
+
+.entry h2 { 
+color:#ffffff;
+font-size:;
+font-weight:;
+letter-spacing:;
+line-height:;
+padding-top:;
+ }
+
+.entry h3 { 
+color:#ffffff;
+font-size:;
+font-weight:;
+letter-spacing:;
+line-height:;
+padding-top:;
+ }
+
+h2.widget_title,h2.widgettitle { 
+color:#ffffff;
+font-size:;
+font-weight:;
+letter-spacing:;
+line-height:;
+padding-top:;
+ }
+
+.entry ,.widget,.post-title a { 
+color:#ffffff;
+font-size:;
+font-weight:;
+letter-spacing:;
+line-height:;
+padding:;
+ }
+.overlayer { background-color:rgba(0,0,0,0); }
+#header
+{
+background-color:rgba(0,0,0,0.60);position:fixed;z-index:999;width:100%;top:0;-webkit-transition:all .6s ease-out;-moz-transition:all .6s ease-out;-ms-transition:all .6s ease-out; border-bottom:rgba(0,0,0,0.50) 1px solid;
+}
+.archive #header,.page #header,.single #header{box-sizing:border-box;background-color:rgba(0,0,0,0.95)!important;border-bottom:rgba(0,0,0,1.00) 1px solid}
+.menu_title
+{
+    color:#fff;
+}

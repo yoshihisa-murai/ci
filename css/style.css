@@ -121,6 +121,7 @@ button,input,label,select,textarea{font-family:inherit}
 .col-3cm .s2,.container,.content,.main,.main-inner,.sidebar{position:relative}
 #paginate,.nav-toggle,.page-image-text,.sidebar-toggle,.social-links li a,.thumb-icon{text-align:center}
 .entry h1,.entry h2,.entry h3,.entry h4,.entry h5,.entry h6{font-weight:300;line-height:1.3em;margin-top:35px}
+.entry{color:#fff}
 .col-3cl .main,.col-3cr .main{background-image:none}
 .entry .gallery .gallery-item:hover .gallery-caption{bottom:0}
 .entry .gallery-columns-5 .gallery-caption,.entry .gallery-columns-6 .gallery-caption,.entry .gallery-columns-7 .gallery-caption,.entry .gallery-columns-8 .gallery-caption,.entry .gallery-columns-9 .gallery-caption{display:none!important}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2016-05-25 12:00:01
+<?php /* Smarty version Smarty-3.1.8, created on 2016-06-01 22:50:43
          compiled from "/home/sites/heteml/users/p/l/a/planx/web/test/casino/application/views/templates/top/sp/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18196652175744220bb15e60-24519645%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0b12adea2c6a67e82882d909e10422670ffaa974' => 
     array (
       0 => '/home/sites/heteml/users/p/l/a/planx/web/test/casino/application/views/templates/top/sp/index.tpl',
-      1 => 1464145199,
+      1 => 1464787649,
       2 => 'file',
     ),
   ),
@@ -23,44 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5744220bb2c7d8_31919842')) {function content_5744220bb2c7d8_31919842($_smarty_tpl) {?><div id="wrapper">
-	<header id="header">
-		<div id="header-inner" class="container-inner">
-			<div id="logo-small">
-				<h1 class="site-title"><a href="/kjn/" rel="home" itemprop="url"><img src="<?php echo base_url('/');?>
-images/2016/05/top_logo.png" alt="テスト"></a></h1>
-			</div>
-    		<!--#nav-topbar-->
-			<nav  id="nav-topbar"> 
-	    	<!--smartphone drawer menu--> 
-	    		<a class="nav-toggle-smart" href="#menu"> <span></span> </a> 
-			<!--/smartphone drawer menu-->
+<?php if ($_valid && !is_callable('content_5744220bb2c7d8_31919842')) {function content_5744220bb2c7d8_31919842($_smarty_tpl) {?><body class="home blog col-1c full-width topbar-enabled unknown">
+<div id="wrapper">
+<?php echo $_smarty_tpl->getSubTemplate ('common/sp/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-				<div class="nav-wrap container">
-		        	<ul id="menu-menu-1" class="nav container-inner group">
-		        		<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/kjn/"><div class="menu_title">ホーム</div><div class="menu_description"></div></a></li>
-						<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">イベント</div><div class="menu_description"></div></a></li>
-						<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">help</div><div class="menu_description"></div></a></li>
-						<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="neteller.html"><div class="menu_title">NETELLER</div><div class="menu_description"></div></a></li>
-					</ul>
-				</div>
-				<div class="toggle-search"><i class="fa fa-search"></i></div>
-				<div class="search-expand">
-					<div class="search-expand-inner">
-						<form method="get" class="searchform themeform" action="/kjn/">
-							<div>
-								<input type="text" class="search" name="s" onblur="if(this.value=='')this.value='検索キーワードを入力して、Enterキーをクリックします';" onfocus="if(this.value=='検索キーワードを入力して、Enterキーをクリックします')this.value='';" value="検索キーワードを入力して、Enterキーをクリックします" />
-							</div>
-						</form>
-					</div>
-				</div>
-	    	</nav>
-			<!--/#nav-topbar--> 
-			<!--/.container-inner--> 
-    		<!--/.container--> 
-  		</div>
-	</header>
-	<!--/#header-->
 
 	<div class="container container_bg" id="page">
 		<div id="head_space" class="clearfix"> 
@@ -119,7 +85,8 @@ images/topbana_sp.jpg" alt="" title="" />
 
 		<div class="container-inner container-inner2 freespace-pad">
 			<div class="login_block">
-				<a href="regist.html"><img src="<?php echo base_url('/');?>
+				<a href="<?php echo base_url('/');?>
+signup/"><img src="<?php echo base_url('/');?>
 images/regist_btn.png"></a><img id="trigger-overlay" src="<?php echo base_url('/');?>
 images/login_btn.png">
 			</div>
@@ -256,79 +223,19 @@ images/news_title.png"></h3>
 	</div>
 
 <!--/.container-->
-
 	<div id="page-top">
 		<p><a id="move-page-top"><i class="fa fa-angle-up"></i></a></p>
 	</div>
-	<footer id="footer">
-		<section class="container" id="footer-bottom">
-			<div class="container-inner">
-				<div class="pad group">
-					<div><img src="<?php echo base_url('/');?>
-images/under_bana.png" /></div>
-					<div class="content_all cf">
-						<div class="content_l">
-							<img src="<?php echo base_url('/');?>
-images/licence.png" />
-						</div>
-						<div class="content_l">
-							<img src="<?php echo base_url('/');?>
-images/under18ng.png" />
-						</div>
-					</div>
-					<div class="footer_copyright">
-						<div id="copyright">
-							<p>&copy; 2016.テストAll Rights Reserved.</p>
-						</div>
-						<!--/#copyright-->
-					</div>
-					<div class="oi_soc_icons clearfix"></div>
-				</div>
-				<!--/.pad--> 
-			</div>
-			<!--/.container-inner--> 
-		</section>
-		<!--/.container--> 
-	</footer>
-	<!--/#footer-->
+<?php echo $_smarty_tpl->getSubTemplate ('common/sp/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+
 </div>
 <!--/#wrapper-->
 
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/jquery.jplayer.min.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/owl.carousel.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/wow.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/jquery.mmenu.min.all.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/SmoothScroll.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/jquery.easing.1.3.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/jquery.scrolly.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/imgLiquid-min.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/scripts.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/megamenu.js?ver=4.5.2"></script>
-<script type='text/javascript' src="<?php echo base_url('/');?>
-js/wp-embed.min.js?ver=4.5.2"></script>
-<!--[if lt IE 9]>
-<script src="<?php echo base_url('/');?>
-js/ie/respond.js"></script>
-<![endif]-->
-  <!--drawer menu-->
-	<nav id="menu">
-	    <ul id="menu-menu-2" class=""><li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/kjn/"><div class="menu_title">ホーム</div><div class="menu_description"></div></a></li>
-			<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">イベント</div><div class="menu_description"></div></a></li>
-			<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">help</div><div class="menu_description"></div></a></li>
-			<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="neteller.html"><div class="menu_title">NETELLER</div><div class="menu_description"></div></a></li>
-		</ul>
-	</nav>
-  <!--/drawer menu-->
+<?php echo $_smarty_tpl->getSubTemplate ('common/sp/footer_script.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('common/sp/navi.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 
 	<div class="overlay overlay-contentscale">
 		<button type="button" class="overlay-close">Close</button>
@@ -337,7 +244,7 @@ js/ie/respond.js"></script>
 images/neo_casino_logo2.png" /></h3>
 			<p style="text-align:center; margin-top:10px;">ネオカジノにログイン</p>
 			
-      <?php echo form_open('top/sp',$_smarty_tpl->tpl_vars['form_style']->value);?>
+      <?php echo form_open('login',$_smarty_tpl->tpl_vars['form_style']->value);?>
 
 				<ul>
 					<li>ログインID：<?php echo form_input('user_email');?>
@@ -354,5 +261,4 @@ signup/sp">登録へ</a></p>
 			</form>
 		</div>
 	</div>
-    
 <?php }} ?>

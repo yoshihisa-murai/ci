@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2016-05-25 11:03:53
+<?php /* Smarty version Smarty-3.1.8, created on 2016-05-31 13:02:06
          compiled from "/home/sites/heteml/users/p/l/a/planx/web/test/casino/application/views/templates/common/sp/layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14383922775744220bad0486-61573785%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd423313a533ea7db71e1e59536962e15cad0ec72' => 
     array (
       0 => '/home/sites/heteml/users/p/l/a/planx/web/test/casino/application/views/templates/common/sp/layout.tpl',
-      1 => 1464141811,
+      1 => 1464667323,
       2 => 'file',
     ),
   ),
@@ -57,6 +57,8 @@ css/megamenu.css?ver=4.5.2" type='text/css' media='all' />
 css/style8.css" type='text/css' media='all' />
 <link rel='stylesheet' href="<?php echo base_url('/');?>
 css/neocasi.css" type='text/css' media='all' />
+<link rel='stylesheet' href="<?php echo base_url('/');?>
+css/override1.css" type='text/css' media='all' />
 
 <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js?ver=4.5.2"></script>
 <script type='text/javascript' src="<?php echo base_url('/');?>
@@ -82,7 +84,6 @@ js/ie/selectivizr.js"></script>
 <![endif]-->
 
 </head>
-<body class="home blog col-1c full-width topbar-enabled unknown">
  
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['content_tpl']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 

@@ -23,6 +23,7 @@
 <link rel='stylesheet' id='megamenu-css'  href="{'/'|base_url}css/megamenu.css?ver=4.5.2" type='text/css' media='all' />
 <link rel='stylesheet' href="{'/'|base_url}css/style8.css" type='text/css' media='all' />
 <link rel='stylesheet' href="{'/'|base_url}css/neocasi.css" type='text/css' media='all' />
+<link rel='stylesheet' href="{'/'|base_url}css/override1.css" type='text/css' media='all' />
 
 <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js?ver=4.5.2"></script>
 <script type='text/javascript' src="{'/'|base_url}js/jquery.flexslider.min.js?ver=4.5.2"></script>
@@ -44,7 +45,6 @@
 <![endif]-->
 
 </head>
-<body class="home blog col-1c full-width topbar-enabled unknown">
  
 {include file=$content_tpl}
 

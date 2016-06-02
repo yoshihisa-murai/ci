@@ -1,40 +1,6 @@
+<body class="home blog col-1c full-width topbar-enabled unknown">
 <div id="wrapper">
-	<header id="header">
-		<div id="header-inner" class="container-inner">
-			<div id="logo-small">
-				<h1 class="site-title"><a href="/kjn/" rel="home" itemprop="url"><img src="{'/'|base_url}images/2016/05/top_logo.png" alt="テスト"></a></h1>
-			</div>
-    		<!--#nav-topbar-->
-			<nav  id="nav-topbar"> 
-	    	<!--smartphone drawer menu--> 
-	    		<a class="nav-toggle-smart" href="#menu"> <span></span> </a> 
-			<!--/smartphone drawer menu-->
-
-				<div class="nav-wrap container">
-		        	<ul id="menu-menu-1" class="nav container-inner group">
-		        		<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/kjn/"><div class="menu_title">ホーム</div><div class="menu_description"></div></a></li>
-						<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">イベント</div><div class="menu_description"></div></a></li>
-						<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">help</div><div class="menu_description"></div></a></li>
-						<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="neteller.html"><div class="menu_title">NETELLER</div><div class="menu_description"></div></a></li>
-					</ul>
-				</div>
-				<div class="toggle-search"><i class="fa fa-search"></i></div>
-				<div class="search-expand">
-					<div class="search-expand-inner">
-						<form method="get" class="searchform themeform" action="/kjn/">
-							<div>
-								<input type="text" class="search" name="s" onblur="if(this.value=='')this.value='検索キーワードを入力して、Enterキーをクリックします';" onfocus="if(this.value=='検索キーワードを入力して、Enterキーをクリックします')this.value='';" value="検索キーワードを入力して、Enterキーをクリックします" />
-							</div>
-						</form>
-					</div>
-				</div>
-	    	</nav>
-			<!--/#nav-topbar--> 
-			<!--/.container-inner--> 
-    		<!--/.container--> 
-  		</div>
-	</header>
-	<!--/#header-->
+{include file='common/sp/header.tpl'}
 
 	<div class="container container_bg" id="page">
 		<div id="head_space" class="clearfix"> 
@@ -91,7 +57,7 @@
 
 		<div class="container-inner container-inner2 freespace-pad">
 			<div class="login_block">
-				<a href="regist.html"><img src="{'/'|base_url}images/regist_btn.png"></a><img id="trigger-overlay" src="{'/'|base_url}images/login_btn.png">
+				<a href="{'/'|base_url}signup/"><img src="{'/'|base_url}images/regist_btn.png"></a><img id="trigger-overlay" src="{'/'|base_url}images/login_btn.png">
 			</div>
 			<div class="widget-meta">  
 				<h2 class='widgettitle wow'>イベント一覧<span class="left" style="background-color:#f1b458;"></span> <span class="right" style="background-color:#f1b458;"></span></h2>
@@ -200,64 +166,16 @@
 	</div>
 
 <!--/.container-->
-
 	<div id="page-top">
 		<p><a id="move-page-top"><i class="fa fa-angle-up"></i></a></p>
 	</div>
-	<footer id="footer">
-		<section class="container" id="footer-bottom">
-			<div class="container-inner">
-				<div class="pad group">
-					<div><img src="{'/'|base_url}images/under_bana.png" /></div>
-					<div class="content_all cf">
-						<div class="content_l">
-							<img src="{'/'|base_url}images/licence.png" />
-						</div>
-						<div class="content_l">
-							<img src="{'/'|base_url}images/under18ng.png" />
-						</div>
-					</div>
-					<div class="footer_copyright">
-						<div id="copyright">
-							<p>&copy; 2016.テストAll Rights Reserved.</p>
-						</div>
-						<!--/#copyright-->
-					</div>
-					<div class="oi_soc_icons clearfix"></div>
-				</div>
-				<!--/.pad--> 
-			</div>
-			<!--/.container-inner--> 
-		</section>
-		<!--/.container--> 
-	</footer>
-	<!--/#footer-->
+{include file='common/sp/footer.tpl'}
+
 </div>
 <!--/#wrapper-->
 
-<script type='text/javascript' src="{'/'|base_url}js/jquery.jplayer.min.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/owl.carousel.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/wow.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/jquery.mmenu.min.all.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/SmoothScroll.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/jquery.easing.1.3.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/jquery.scrolly.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/imgLiquid-min.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/scripts.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/megamenu.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/wp-embed.min.js?ver=4.5.2"></script>
-<!--[if lt IE 9]>
-<script src="{'/'|base_url}js/ie/respond.js"></script>
-<![endif]-->
-  <!--drawer menu-->
-	<nav id="menu">
-	    <ul id="menu-menu-2" class=""><li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/kjn/"><div class="menu_title">ホーム</div><div class="menu_description"></div></a></li>
-			<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">イベント</div><div class="menu_description"></div></a></li>
-			<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">help</div><div class="menu_description"></div></a></li>
-			<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="neteller.html"><div class="menu_title">NETELLER</div><div class="menu_description"></div></a></li>
-		</ul>
-	</nav>
-  <!--/drawer menu-->
+{include file='common/sp/footer_script.tpl'}
+{include file='common/sp/navi.tpl'}
 
 	<div class="overlay overlay-contentscale">
 		<button type="button" class="overlay-close">Close</button>
@@ -265,10 +183,10 @@
 			<h3><img src="{'/'|base_url}images/neo_casino_logo2.png" /></h3>
 			<p style="text-align:center; margin-top:10px;">ネオカジノにログイン</p>
 			{*<form style="margin-top:10px;" action="mypage.html" method="post" enctype="multipart/form-data">*}
-      {form_open( 'top/sp', $form_style )}
+      {form_open( 'login', $form_style )}
 				<ul>
-					<li>ログインID：{*<input type="text" name="id" value="" />*}{form_input( 'user_email' )}</li>
-					<li>パスワード：{*<input type="password" name="id" value="" />*}{form_password( 'password' )}</li>
+					<li>ログインID：{form_input( 'user_email' )}</li>
+					<li>パスワード：{form_password( 'password' )}</li>
 				</ul>
 				<p style="text-align:center;"><input class="login_btn" type="submit" name="login_submit" value="ログイン" />{form_submit( 'submit', 'ログイン' )}</p>
 				<p style="margin-top:10px;">アカウントをお持ちでない場合は<a href="{'/'|base_url}signup/sp">登録へ</a></p>
@@ -276,17 +194,3 @@
 			</form>
 		</div>
 	</div>
-    {*
-<div id="container">
-    <h1>topページ</h1>
-    {if $is_login }
-        ようこそ{$user['user_email']}さん<br />
-        <a href="{'top/sp/logout'|base_url}">ログアウト</a>
-        <a href="{'edituser/sp'|base_url}">会員情報変更</a>
-    {else}
-        {include file="top/sp/login.tpl"}
-        <a href="{'login/sp'|base_url}">ログイン</a>
-    {/if}
-</div>
-
-*}
