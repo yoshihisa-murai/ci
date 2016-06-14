@@ -12,6 +12,7 @@ $config['forgot']['email']       = '登録メールアドレスを忘れた';
 $config['login']['index']        = 'ログイン';
 $config['payment']['index']      = '入金情報確認';
 $config['signup']['index']       = '会員登録';
+$config['signup']['confirm']     = '会員登録(確認)';
 $config['signup']['complete']    = '登録完了';
 $config['top']['index']          = 'トップページ';
 $config['neteller']['index']     = 'NETELLERメニュー';
@@ -20,6 +21,7 @@ $config['neteller']['authority'] = 'NETELLER本人確認の方法';
 $config['neteller']['payment']   = 'NETELLER入金方法';
 $config['neteller']['payoutatm'] = 'NETELLER出金(ATM)方法';
 $config['neteller']['payout']    = 'NETELLER出金方法';
+$config['agreement']['index']    = 'エンドユーザー同意書';
 
 /**
  * Local variables:

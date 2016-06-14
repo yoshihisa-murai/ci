@@ -1,0 +1,17 @@
+AddHandler php5.6-script .php
+
+# BEGIN heteml
+# 注意:
+# このブロックはヘテムルのコントロールパネルによって作成されました。
+# # BEGIN heteml 〜 # END heteml は編集を行わないようにご注意ください。
+
+AuthUserFile /home/sites/heteml/users/p/l/a/planx/web/test/casino/.htpasswd
+AuthGroupFile /dev/null
+AuthName "sucure"
+AuthType Basic
+require valid-user
+# END heteml
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|robots\.txt|(.*)\.css|(.*)\.js)
+RewriteRule ^(.*)$ /casino/index.php/$1 [L]

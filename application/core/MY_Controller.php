@@ -79,18 +79,6 @@ class MY_Controller extends CI_Controller {
         if ( $this->_is_login ) {
             // ユーザデータ取得
             $this->_user = $this->User->getByUserId( $this->_session['user_id'] );
-        } else {
-            // ログイン処理
-            $post = $this->input->post();
-            if ( ! empty( $post ) ) {
-                // ログイン成功ならセッションに保持してリダイレクト
-                $this->_set_validation();
-                if ( $this->form_validation->run() ) {
-                    // ログイン処理
-                    $this->my_user->set_login( $post );
-                    redirect( 'top' );
-                }
-            }
         }
     }
 
@@ -100,6 +88,7 @@ class MY_Controller extends CI_Controller {
     /**
      * ログイン判定
      */
+    /*
     public function validate_auth()
     {
         if ( $this->User->can_log_in() ) {
@@ -109,6 +98,7 @@ class MY_Controller extends CI_Controller {
             return false;
         }
     }
+     */
 
     // }}}
 
@@ -116,11 +106,13 @@ class MY_Controller extends CI_Controller {
     /**
      * バリデーション
      */
+    /*
     private function _set_validation()
     {
         $this->form_validation->set_rules( "user_email", my_const::FORM_MAIL_ADDRESS, "required|valid_email|callback_validate_auth" );
         $this->form_validation->set_rules( "password", my_const::FORM_PASSWORD, "required" );
     }
+     */
 
     // }}}
 

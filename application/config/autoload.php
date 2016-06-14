@@ -99,7 +99,7 @@ $autoload['helper'] = array( 'form', 'url', 'log' );
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array( 'page_title' );
+$autoload['config'] = array( 'page_title', 'pref', 'apiparams', 'form_attr' );
 
 /*
 | -------------------------------------------------------------------

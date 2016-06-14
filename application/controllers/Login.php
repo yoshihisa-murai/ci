@@ -28,6 +28,7 @@ class Login extends MY_Controller {
     {
         // 別ページからリダイレクトしてきた場合ログイン後に元のページへ遷移
         $redirect_url = $this->input->get( 'r' ) ? $this->input->get( 'r' ) : 'top';
+
         $post = $this->input->post();
         $user_email = ( isset( $post['user_email'] ) ) ? $post['user_email'] : null;
         if ( $post ) {

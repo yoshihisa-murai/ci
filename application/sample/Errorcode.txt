@@ -1,0 +1,17 @@
+ERROR CODES
+1x = Missing fields or no data received
+2 = Data Security Error
+3 = Error related to Vendor Keys
+4 = Error related to One Time Access Key
+5x = Error related to OAuth Tokens
+6 = Error related to Authorization Code
+7x = Error related to Nihtan Login
+7a = Trying to login without credits in Nihtan or Insufficient amount of money to cash out
+7b = Trying to log in an account which is already logged in
+7c = Error validating OTA key during Nihtan Login
+8 = Error sending the data back to the Vendor after the transfer
+9 = No transfer method specified
+10 = (For Vendors with Credits Type) Insufficient credits
+
+SUCCESSFUL CODES
+1 = Successful transfer

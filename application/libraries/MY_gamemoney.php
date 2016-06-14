@@ -25,10 +25,10 @@ class MY_gamemoney {
      * ログイン状態にする
      * @params array $post  postデータ
      */
-    public function set_firstdata( $user )
+    public function set_firstdata( $user_id, $user )
     {
         $data = array(
-            'user_id'      => $user['user_id'],
+            'user_id'      => $user_id,
             'user_email'   => $user['user_email'],
             'nickname'     => $user['nickname'],
             'in_money'     => 0,

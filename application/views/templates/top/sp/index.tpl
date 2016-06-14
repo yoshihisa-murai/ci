@@ -1,3 +1,4 @@
+{if !$is_login}
 <body class="home blog col-1c full-width topbar-enabled unknown">
 <div id="wrapper">
 {include file='common/sp/header.tpl'}
@@ -185,7 +186,7 @@
 			{*<form style="margin-top:10px;" action="mypage.html" method="post" enctype="multipart/form-data">*}
       {form_open( 'login', $form_style )}
 				<ul>
-					<li>ログインID：{form_input( 'user_email' )}</li>
+					<li>E-mail：{form_input( 'user_email' )}</li>
 					<li>パスワード：{form_password( 'password' )}</li>
 				</ul>
 				<p style="text-align:center;"><input class="login_btn" type="submit" name="login_submit" value="ログイン" />{form_submit( 'submit', 'ログイン' )}</p>
@@ -194,3 +195,6 @@
 			</form>
 		</div>
 	</div>
+{else}
+{include file='top/sp/mypage.tpl'}
+{/if}
