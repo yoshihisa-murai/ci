@@ -15,8 +15,9 @@ class Payment extends MY_Controller {
         parent::__construct();
         // モデルロード
         $this->load->model( 'Gamemoneylog' );
+        $this->load->library( 'MY_nihtanApi' );
         if ( ! $this->my_user->is_login() ) {
-            redirect( 'login?r=' . base_url() . strtolower( __CLASS__ ) );
+            redirect( 'top' );
         }
     }
 
@@ -24,11 +25,51 @@ class Payment extends MY_Controller {
 
     // {{{ public function index()
     /**
-     * 支払い情報ページ
+     * 支払い入力ページ
      */
     public function index()
     {
+        $this->smarty->assign( 'user', $this->_user );
+        $this->view( __FUNCTION__ );
+    }
+
+    // }}}
+
+    // {{{ public function confirm()
+    /**
+     * 支払い確認ページ
+     */
+    public function confirm()
+    {
         $game_money = $this->Gamemoneylog->getByUserIdList( $this->_user['user_id'], 0, 20 );
+        $this->smarty->assign( 'game_money', $game_money );
+        $this->smarty->assign( 'user', $this->_user );
+        $this->view( __FUNCTION__ );
+    }
+
+    // }}}
+
+    // {{{ public function complete()
+    /**
+     * 支払い完了ページ
+     */
+    public function complete()
+    {
+        $post = $this->input->post();
+        if ( !$post ) {
+            redirect( 'payment' );
+        }
+        $params['meta'] = array(
+            'client_id' => 'ModuleTestID0001',
+            'client_username' => 'ModuleTest',
+            'fallback_url' => '',
+            'receiver_url' => '' // Point your domain or IP here then the path to the receiver php file
+        );
+        $api = $this->my_nihtanapi( $params );
+        $transfer_amount = $post['pay_number'];
+        $transfer_method = 'cash_in';
+        $recommender_id = 'test1234';
+        $api->transfer_money_then_redirect( $transfer_amount, $transfer_method, $recommender_id );
         $this->smarty->assign( 'game_money', $game_money );
         $this->smarty->assign( 'user', $this->_user );
         $this->view( __FUNCTION__ );

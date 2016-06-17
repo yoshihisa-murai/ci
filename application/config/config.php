@@ -507,3 +507,9 @@ $config['info_mail'] = 'casino_test@planx.jp';
 $config['log_path'] = 'logs/';
 $config['log_file_extension'] = 'log';
 $config['show_in_log'] = array( 'ERROR', 'DEBUG', 'INFO' );
+
+/*
+ * game url
+ */
+$config['game_url']['ios'] = 'https://build.phonegap.com/apps/2064697/install/eXMsbS-4RzNvKNKS3-AK';
+$config['game_url']['android'] = 'http://www.nihtan.com/download/.Nihtan-release.apk';

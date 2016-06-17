@@ -189,7 +189,7 @@
 					<li>E-mail：{form_input( 'user_email' )}</li>
 					<li>パスワード：{form_password( 'password' )}</li>
 				</ul>
-				<p style="text-align:center;"><input class="login_btn" type="submit" name="login_submit" value="ログイン" />{form_submit( 'submit', 'ログイン' )}</p>
+				<p style="text-align:center;"><input class="login_btn" type="submit" name="login_submit" value="ログイン" />{*form_submit( 'submit', 'ログイン' )*}</p>
 				<p style="margin-top:10px;">アカウントをお持ちでない場合は<a href="{'/'|base_url}signup/sp">登録へ</a></p>
         {form_close()}
 			</form>

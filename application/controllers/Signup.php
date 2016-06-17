@@ -117,14 +117,6 @@ class Signup extends MY_Controller {
         $this->form_validation->set_rules( "mobile3", my_const::FORM_MOBILE3, "required|trim|htmlspecialchars|exact_length[4]|numeric" );
     }
     // }}}
-    /*
-            'language'         => $post['use_language'],
-            'currency_unit'    => $post['currency_unit'],
-            'country'          => $post['country'],
-            'pref'             => $post['pref'],
-            'add_no1'          => $post['add_no1'],
-            'add_no2'          => $post['add_no2'],
-     */
  
 }
 /**

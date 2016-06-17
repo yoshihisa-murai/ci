@@ -26,7 +26,6 @@ public $ci;
 	protected $encryption_key = 'Bluefrog';
 	
 	public function __construct($params) {
-        var_dump($params);
     $this->_config =& get_config(); 
     $this->ci =& get_instance();
     $this->ci->load->library( 'MY_stringEncrypter' );

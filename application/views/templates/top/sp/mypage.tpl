@@ -23,6 +23,7 @@
 									<p style="text-align:right;">いらっしゃいませ。{$user.nickname}さん<br />
 									{*前回ログイン：2016年4月30日15:43:26*}
 									</p>
+									<p style="text-align:right;"><a href="{'/'|base_url}top/logout">logout(test)</a></p>
 									<div class="entry-inner clearfix">
 										<div style="text-align:center;"><a href="#"><img src="{'/'|base_url}images/baccarat_play_btn.png" /></a></div>
 										<h2 class="neteller_h2">操作メニュー</h2>

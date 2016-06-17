@@ -38,11 +38,11 @@ class Login extends MY_Controller {
                 // ログイン処理
                 $this->my_user->set_login( $post );
                 redirect( $redirect_url );
+            } else {
+                redirect( $redirect_url );
             }
         }
-        $this->smarty->assign( 'redirect_url', $redirect_url );
-        $this->smarty->assign( 'user_email', $user_email );
-        $this->view( __FUNCTION__ );
+        redirect( $redirect_url );
     }
 
     // }}}
