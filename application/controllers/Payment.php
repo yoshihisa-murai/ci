@@ -63,16 +63,18 @@ class Payment extends MY_Controller {
      */
     public function complete()
     {
+        // 戻るボタンはリダイレクトで処理
+        $post = $this->input->post();
+        if ( !$post || isset( $post['back'] ) ) {
+            redirect( 'payment' );
+        }
+
         // paramsの設定があるのでconstructで呼べない為、例外的にここでload
         $error_id = 1;
         $cash_kind = 1;
         $params = array( 'error_id' => $error_id, 'cash_kind' => $cash_kind );
         $this->load->library( 'MY_errCode', $params );
         $error_code = $this->my_errcode;
-        $post = $this->input->post();
-        if ( !$post || isset( $post['back'] ) ) {
-            redirect( 'payment' );
-        }
         $transfer_amount = $post['pay_number'];
         $transfer_method = 'cash_in';
         $recommender_id = 'test1234';

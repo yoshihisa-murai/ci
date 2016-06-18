@@ -70,8 +70,7 @@
                         <figure>
                             <img width="520" height="520" src="{'/'|base_url}images/2016/05/test4-520x520.jpg" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="test4" srcset="{'/'|base_url}images/2016/05/test4-520x520.jpg 520w, {'/'|base_url}images/2016/05/test4-150x150.jpg 150w, {'/'|base_url}images/2016/05/test4-300x300.jpg 300w, {'/'|base_url}images/2016/05/test4-100x100.jpg 100w, {'/'|base_url}images/2016/05/test4.jpg 306w" sizes="(max-width: 520px) 100vw, 520px" />
                             <figcaption>
-                                <a href="#
-                                " title="敗者キャッシュバック"></a>
+                                <a href="#" title="敗者キャッシュバック"></a>
                                 <div class="project-info">
                                     <h4><a href="/kjn/2016/05/07/%e6%95%97%e8%80%85%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%83%90%e3%83%83%e3%82%af/" title="敗者キャッシュバック">敗者キャッシュバック</a></h4>
                                     <div class="project-categories"><a href="/kjn/category/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/" rel="category tag">イベント</a></div>
