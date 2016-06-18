@@ -40,15 +40,15 @@ class Gamemoneylog extends CI_Model {
     /**
      * データ件数取得 
      */
-    public function getCountByUserId( $user_id, $start, $num ) {
+    public function getCountByUserId( $user_id ) {
         $this->db->where( 'user_id', $user_id );
-        $res = $this->db->get( $this->_table );
-        return $res->count_all_results();
+        $res = $this->db->count_all( $this->_table );
+        return $res;
     }
 
     // }}}
 
-    // {{{ public function getByUserIdList( $user_id )
+    // {{{ public function getByUserIdList( $user_id, $start, $num )
     /**
      * データ取得 
      * 管理ツール用
@@ -57,8 +57,12 @@ class Gamemoneylog extends CI_Model {
         $this->db->where( 'user_id', $user_id );
         $this->db->order_by( 'insert_date', 'desc' );
         $this->db->limit( $start, $num );
-        $res = $this->db->get( $this->_table );
-        return $res->row_array();
+        $query = $this->db->get( $this->_table );
+        $res = array();
+        foreach( $query->result() as $row ) {
+            $res[] = $row;
+        }
+        return $res;
     }
 
     // }}}

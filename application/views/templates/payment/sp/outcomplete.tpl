@@ -1,3 +1,28 @@
+{*
+<?php
+    require_once("lib/Err_Code_Class.php");
+
+    if(empty($_GET["err_id"]) && empty($_GET["succmsg"]))
+    {
+        $id = "";
+        $sebu_check = new Err_Code_Class($id);
+    }
+    else
+    {
+        if(!empty($_GET["err_id"]))
+        {
+            $id = $_GET["err_id"];
+            $sebu_check = new Err_Code_Class($id);
+        }
+        if(!empty($_GET["succmsg"]))
+        {
+            $id = $_GET["succmsg"];
+            $sebu_check = new Err_Code_Class($id,2);//1:入金　2:出金
+        }
+    }
+?>
+*}
+
 <body class="single single-post postid-21 single-format-standard col-1c full-width topbar-enabled unknown">
 <div id="wrapper">
 {include file='common/sp/header.tpl'}
@@ -6,7 +31,7 @@
         <div id="head_space" class="clearfix"> 
             <div class="page-image">
                 <div class="image-container">
-                    <img width="960" height="440" src="{'/'|base_url}images/sub_bg_head.jpg" class="attachment-thumb-large size-thumb-large wp-post-image" alt="test3" />                   
+                    <img width="960" height="440" src="{'/'|base_url}images/sub_bg_head.jpg" class="attachment-thumb-large size-thumb-large wp-post-image" alt="test3" />
                 </div>
             </div><!--/.page-image-->
         </div>
@@ -15,28 +40,13 @@
                 <div class="main-inner group">
                     <section class="content">
                         <div class="page-title pad">
-                            <h1 class="post-title entry-title">NETELLER(ネッテラー)メニュー</h1>
+                            <h1 class="post-title entry-title">{*<?php echo $sebu_check->message_title; ?>*}</h1>
+                            <p style="color:#fff;">{*<?php echo $sebu_check->message_detail; ?>*}</p>
                         </div><!--/.page-title-->
+        
                         <div class="pad group">
                             <article class="post-21 post type-post status-publish format-standard has-post-thumbnail hentry category-3">
                                 <div class="entry share">
-                                    <p style="text-align:right;">いらっしゃいませ。{$user.nickname}さん<br />
-                                    {*前回ログイン：2016年4月30日15:43:26*}
-                                    </p>
-                                    <p style="text-align:right;"><a href="{'/'|base_url}top/logout">logout(test)</a></p>
-                                    <div class="entry-inner clearfix">
-                                        <div style="text-align:center;"><a href="#"><img src="{'/'|base_url}images/baccarat_play_btn.png" /></a></div>
-                                        <h2 class="neteller_h2">操作メニュー</h2>
-                                        <div class="mypage_menu cf">
-                                            <div class="mypage_menu_btn_box"><a href="{'/'|base_url}payment/"><img src="{'/'|base_url}images/coincharge_btn.png"></a></div>
-                                            <div class="mypage_menu_btn_box"><img src="{'/'|base_url}images/playdata_btn.png"></div>
-                                            <div class="mypage_menu_btn_box"><a href="{'/'|base_url}payment/out"><img src="{'/'|base_url}images/payment_btn.png"></a></div>
-                                            <div class="mypage_menu_btn_box"><img src="{'/'|base_url}images/toto_btn.png"></div>
-                                            <div class="mypage_menu_btn_box"><a href="{'/'|base_url}payment/history"><img src="{'/'|base_url}images/userdata_btn.png"></a></div>
-                                            <div class="mypage_menu_btn_box"><img src="{'/'|base_url}images/friend_btn.png"></div>
-                                        </div>
-                                        <div>
-                                    </div>
                                     <!--
                                     <div class="oi_post_share_icons"> 
                                         <div class="oi_soc_icons">
@@ -70,9 +80,8 @@
     <div id="page-top">
         <p><a id="move-page-top"><i class="fa fa-angle-up"></i></a></p>
     </div>
-{include file='common/sp/footer.tpl'}
+    {include file='common/sp/footer.tpl'}
 </div>
 <!--/#wrapper-->
-
 {include file='common/sp/footer_script.tpl'}
 {include file='common/sp/navi.tpl'}

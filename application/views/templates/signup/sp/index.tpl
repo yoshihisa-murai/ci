@@ -1,22 +1,22 @@
 <body class="single single-post postid-21 single-format-standard col-1c full-width topbar-enabled unknown">
 <div id="wrapper">
 {include file='common/sp/header.tpl'}
-	<div class="container container_bg" id="page">
-		<div id="head_space" class="clearfix"> 
-			<div class="page-image">
-				<div class="image-container">
-					<img width="960" height="440" src="{'/'|base_url}images/sub_bg_head.jpg" class="attachment-thumb-large size-thumb-large wp-post-image" alt="test3" />                   
-				</div>
-			</div><!--/.page-image-->
-		</div>
-		<div class="container-inner container-inner2 up_margin">
-			<div class="main">
-				<div class="main-inner group">
-					<section class="content">
-						<div class="page-title pad">
-							<h1 class="post-title entry-title">新規プレイヤー登録</h1>
-						</div><!--/.page-title-->
-						<div class="pad group">
+    <div class="container container_bg" id="page">
+        <div id="head_space" class="clearfix"> 
+            <div class="page-image">
+                <div class="image-container">
+                    <img width="960" height="440" src="{'/'|base_url}images/sub_bg_head.jpg" class="attachment-thumb-large size-thumb-large wp-post-image" alt="test3" />                   
+                </div>
+            </div><!--/.page-image-->
+        </div>
+        <div class="container-inner container-inner2 up_margin">
+            <div class="main">
+                <div class="main-inner group">
+                    <section class="content">
+                        <div class="page-title pad">
+                            <h1 class="post-title entry-title">新規プレイヤー登録</h1>
+                        </div><!--/.page-title-->
+                        <div class="pad group">
             <article class="post-21 post type-post status-publish format-standard has-post-thumbnail hentry category-3">
             {form_open("{'/'|base_url}signup/")}
                 <div class="entry share">
@@ -95,69 +95,55 @@
                 <!--/.entry-->
                 <!--/.post-inner-->
             </article>
-							<!--/.post-->
-						</div>
-					</section>
-					<!--/.content-->
-				</div>
-				<!--/.main-inner-->
-			</div>
-			<!--/.main-->
+                            <!--/.post-->
+                        </div>
+                    </section>
+                    <!--/.content-->
+                </div>
+                <!--/.main-inner-->
+            </div>
+            <!--/.main-->
 
-		</div>
-		<!--/.container-inner-->
-	</div>
-	<!--/.container-->
-	<div id="page-top">
-		<p><a id="move-page-top"><i class="fa fa-angle-up"></i></a></p>
-	</div>
+        </div>
+        <!--/.container-inner-->
+    </div>
+    <!--/.container-->
+    <div id="page-top">
+        <p><a id="move-page-top"><i class="fa fa-angle-up"></i></a></p>
+    </div>
 {include file='common/sp/footer.tpl'}
 </div>
 <!--/#wrapper-->
 
-<script type='text/javascript' src="{'/'|base_url}js/jquery.jplayer.min.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/owl.carousel.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/wow.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/jquery.mmenu.min.all.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/SmoothScroll.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/jquery.easing.1.3.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/jquery.scrolly.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/imgLiquid-min.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/scripts.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/social-button.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/megamenu.js?ver=4.5.2"></script>
-<script type='text/javascript' src="{'/'|base_url}js/wp-embed.min.js?ver=4.5.2"></script>
-<!--[if lt IE 9]>
-<script src="{'/'|base_url}js/ie/respond.js"></script>
-<![endif]-->
+{include file='common/sp/footer_script.tpl'}
 {include file='common/sp/navi.tpl'}
-<div id="container">
 {*if !$is_posted }
-		<h1>会員登録ページ</h1>
-		<span class="valid_error">{validation_errors()}</span>
-		{form_open("signup")}
-		<p> e-mail:
-		{form_input('user_email', $input['user_email'])}
-		</p>
-		<p> ニックネーム:
-		{form_input('nickname', $input['nickname'], 'id=nickname')}
-		{form_button('nickname', '重複チェック', 'id=check_nickname')}
-		<span id="check_result" class="valid_error"></span>
-		</p>
-		<p> パスワード
-		{form_password('password')}
-		</p>
-		<p> パスワード確認用
-		{form_password('cpassword')}
-		</p>
+<div id="container">
+        <h1>会員登録ページ</h1>
+        <span class="valid_error">{validation_errors()}</span>
+        {form_open("signup")}
+        <p> e-mail:
+        {form_input('user_email', $input['user_email'])}
+        </p>
+        <p> ニックネーム:
+        {form_input('nickname', $input['nickname'], 'id=nickname')}
+        {form_button('nickname', '重複チェック', 'id=check_nickname')}
+        <span id="check_result" class="valid_error"></span>
+        </p>
+        <p> パスワード
+        {form_password('password')}
+        </p>
+        <p> パスワード確認用
+        {form_password('cpassword')}
+        </p>
 
-		<p>
-		{form_submit('submit', '登録')}
-		</p>
-		{form_close()}
+        <p>
+        {form_submit('submit', '登録')}
+        </p>
+        {form_close()}
 {else}
-		<h1>会員登録ページ</h1>
-		<p>ご登録のメールアドレスに会員登録メールを送信しました。<br />メールに記載されたurlをクリックして本登録を完了させてください。</p>
+        <h1>会員登録ページ</h1>
+        <p>ご登録のメールアドレスに会員登録メールを送信しました。<br />メールに記載されたurlをクリックして本登録を完了させてください。</p>
 {/if}
 </div>
 <a href="{'top'|base_url}">top</a>
