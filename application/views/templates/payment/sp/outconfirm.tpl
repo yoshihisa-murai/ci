@@ -17,8 +17,6 @@
                         <div class="page-title pad">
                             <h1 class="post-title entry-title">出金確認画面</h1>
                             <p style="color:#fff;">このページでは、コインを変換し出金が行えます。</p>
-                            <?php echo $msg; ?>
-                            <?php echo $err_div; ?>
                             <p class="withdrawal_p">現在の引き出し可能な金額は<span>${$history.remain|number_format}</span>です。</p>
                         </div><!--/.page-title-->
 
@@ -35,7 +33,10 @@
                                                     <th>NETELLER ID</th><td></td>
                                                 </tr>
                                             </table>
-                                            <div style="text-align:center;"><?php echo $btn; ?></div>
+                                            <div style="text-align:center;">
+                                                <input type="submit" name="send" value="　出金する　" class="login_btn">
+                                                <input type="submit" name="back" value="　戻　る　" style="background:#fff;" class="login_btn">
+                                            </div>
                                         </div>
                                     </form>
                                 </div>

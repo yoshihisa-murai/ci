@@ -35,8 +35,23 @@ class Payment extends MY_Controller {
      */
     public function index()
     {
+        $post = $this->input->post();
+        $error_msg = '';
         $this->smarty->assign( 'user', $this->_user );
-        $this->view( __FUNCTION__ );
+        if ( isset( $post['check'] ) ) {
+            $this->_set_validation( my_const::PAYMENT_PAYMENT_NUM_INCACH );
+            if ( $this->form_validation->run() ) {
+                $this->smarty->assign( 'post', $post );
+                $this->view( 'confirm' );
+            } else {
+                $error_msg = $this->form_validation->error_string();
+                $this->smarty->assign( 'error_msg', $error_msg );
+                $this->view( __FUNCTION__ );
+            }
+        } else {
+            $this->smarty->assign( 'error_msg', $error_msg );
+            $this->view( __FUNCTION__ );
+        }
     }
 
     // }}}
@@ -48,11 +63,6 @@ class Payment extends MY_Controller {
     public function confirm()
     {
         $post = $this->input->post();
-        $game_money = $this->Gamemoneylog->getByUserIdList( $this->_user['user_id'], 0, 20 );
-        $this->smarty->assign( 'post', $post );
-        $this->smarty->assign( 'game_money', $game_money );
-        $this->smarty->assign( 'user', $this->_user );
-        $this->view( __FUNCTION__ );
     }
 
     // }}}
@@ -151,6 +161,19 @@ class Payment extends MY_Controller {
         $this->smarty->assign( 'user', $this->_user );
         $this->view( __FUNCTION__ );
     }
+    // }}}
+
+    // {{{ private function _set_validation()
+    /**
+     * バリデーション
+     */
+    private function _set_validation( $text )
+    {
+        $this->form_validation->set_rules( "pay_number", $text, "required|is_natural_no_zero|greater_than_equal_to[5]" );
+        $this->form_validation->set_rules( "neteller_id", my_const::FORM_NETELLER_ID, "required" );
+        $this->form_validation->set_rules( "neteller_pass", my_const::FORM_PASSWORD, "required" );
+    }
+
     // }}}
 }
 /**

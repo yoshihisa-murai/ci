@@ -23,7 +23,7 @@ class MY_Controller extends CI_Controller {
         $this->load->library( 'user_agent' );
         $this->smarty->template_dir = APPPATH . 'views/templates';
         $this->smarty->compile_dir  = APPPATH . 'views/templates_c';
-        $this->template = 'layout.tpl';
+//        $this->template = 'layout.tpl';
         $this->_config =& get_config(); 
 
         $this->_session = $this->session->get_userdata();

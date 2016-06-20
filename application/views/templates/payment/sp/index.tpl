@@ -22,31 +22,34 @@
                         <div class="pad group">
                             <article class="post-21 post type-post status-publish format-standard has-post-thumbnail hentry category-3">
                                 <div class="entry share">
-                    {form_open( 'payment/confirm' )}
+                                    <div class="error">{$error_msg}</div>
+                                    {form_open( 'payment' )}
                                         <div class="entry-inner clearfix">
                                             <table class="regist_table">
                                                 <tr>
                                                     <th>入金金額(USD)</th>
-                          <td style="border-top:1px solid #fff;">
-                            {form_input( 'pay_number' )}
-                          </td>
+                                                    <td style="border-top:1px solid #fff;">
+                                                      {form_input( 'pay_number' )}
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <th>NETELLER ID</th>
-                            <td>
-                            {form_input( 'neteller_id' )}
-                            <br />アカウントIDまたはメールアドレス(ご本人様名義のみ利用可)
-                            </td>
+                                                    <td>
+                                                        {form_input( 'neteller_id' )}
+                                                        <br />アカウントIDまたはメールアドレス(ご本人様名義のみ利用可)
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <th>PASSWORD</th>
-                          <td>
-                            {form_password( 'neteller_pass' )}
-                            <br />セキュアIDまたは認証コード(ご本人様名義のアカウントのみ利用可)
-                          </td>
+                                                    <td>
+                                                        {form_password( 'neteller_pass' )}
+                                                        <br />セキュアIDまたは認証コード(ご本人様名義のアカウントのみ利用可)
+                                                    </td>
                                                 </tr>
                                             </table>
-                                            <div style="text-align:center;"><input class="login_btn" type="submit" name="check" value="入金確認画面へ" /></div>
+                                            <div style="text-align:center;">
+                                                <input class="login_btn" type="submit" name="check" value="入金確認画面へ" />
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
