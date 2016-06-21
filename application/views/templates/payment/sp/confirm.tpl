@@ -21,7 +21,7 @@
                         <div class="pad group">
                             <article class="post-21 post type-post status-publish format-standard has-post-thumbnail hentry category-3">
                                 <div class="entry share">
-                                    {form_open( 'payment/complete' )}
+                                    {form_open( 'payment/inredirect' )}
                                         {form_hidden( 'pay_number', $post.pay_number )}
                                         {form_hidden( 'neteller_id', $post.neteller_id )}
                                         {form_hidden( 'password', $post.neteller_pass )}

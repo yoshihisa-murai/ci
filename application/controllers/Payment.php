@@ -18,8 +18,8 @@ class Payment extends MY_Controller {
         $params['meta'] = array(
             'client_id' => 'ModuleTestID0001',
             'client_username' => 'ModuleTest',
-            'fallback_url' => 'http://test.planx.jp/kjn/payment_complete.php',
-            'receiver_url' => 'http://test.planx.jp/kjn/payment_complete.php' // Point your domain or IP here then the path to the receiver php file
+            'fallback_url' => 'http://test.planx.jp/casino/payment/complete',
+            'receiver_url' => 'http://test.planx.jp/casino/payment/complete' // Point your domain or IP here then the path to the receiver php file
         );
         $this->load->library( 'MY_nihtanApi', $params );
         if ( ! $this->my_user->is_login() ) {
@@ -31,12 +31,13 @@ class Payment extends MY_Controller {
 
     // {{{ public function index()
     /**
-     * 支払い入力ページ
+     * 入金ページ
      */
     public function index()
     {
         $post = $this->input->post();
         $error_msg = '';
+
         $this->smarty->assign( 'user', $this->_user );
         if ( isset( $post['check'] ) ) {
             $this->_set_validation( my_const::PAYMENT_PAYMENT_NUM_INCACH );
@@ -56,22 +57,11 @@ class Payment extends MY_Controller {
 
     // }}}
 
-    // {{{ public function confirm()
+    // {{{ public function inredirect()
     /**
-     * 支払い確認ページ
+     * 入金処理
      */
-    public function confirm()
-    {
-        $post = $this->input->post();
-    }
-
-    // }}}
-
-    // {{{ public function complete()
-    /**
-     * 支払い完了ページ
-     */
-    public function complete()
+    public function inredirect()
     {
         // 戻るボタンはリダイレクトで処理
         $post = $this->input->post();
@@ -81,6 +71,8 @@ class Payment extends MY_Controller {
 
         // last log
         $log_data = $this->Gamemoneylog->getByUserIdAtLatest( $this->_user['user_id'] );
+        // todo:プレイデータのデータを取得
+        $current_money = $this->my_nihtanapi->get_nihtan_money();
         // log insert
         $params = array(
             'user_id'    => $this->_user['user_id'],
@@ -88,32 +80,42 @@ class Payment extends MY_Controller {
             'nickname'   => $this->_user['nickname'],
             'category'   => my_const::LOG_REASON_RECEIVE,
             'num'        => $post['pay_number'],
-            'remain'     => $log_data['remain'] + $post['pay_number'],
+            'remain'     => $current_money + $post['pay_number'],
             'reason'     => my_const::LOG_REASON_RECEIVE,
         );
+
+        // トランザクション開始
         $this->db->trans_begin();
         $this->Gamemoneylog->insert( $params );
         if ( $this->db->trans_status() === false ) {
             // ロールバック
             $this->db->trans_rollback();
-//        } elseif ( ) {
-//            $this->db->trans_rollback();
         }
         // コミット
         $this->db->trans_commit();
-        $error_id = 1;
-        $cash_kind = 1;
-        $params = array( 'error_id' => $error_id, 'cash_kind' => $cash_kind );
+
+        $transfer_amount = $post['pay_number'];
+        $transfer_method = 'cash_in';
+        $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method );
+
+        $this->smarty->assign( 'user', $this->_user );
+        $this->view( __FUNCTION__ );
+    }
+
+    // }}}
+
+    // {{{ public function complete( $succmsg = 1 )
+    /**
+     * 入金完了ページ
+     * @params int $succmsg APIからのリダイレクトクエリ 1:成功 他:失敗
+     */
+    public function complete( $succmsg = 1 )
+    {
+        $params = array( 'error_id' => $succmsg, 'cash_kind' => my_const::LOG_REASON_RECEIVE );
         // paramsの設定があるのでconstructで呼べない為、例外的にここでload
         $this->load->library( 'MY_errCode', $params );
         $error_code = $this->my_errcode;
-        $transfer_amount = $post['pay_number'];
-        $transfer_method = 'cash_in';
-        $recommender_id = 'test1234';
-//        $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method, $recommender_id );
-
         $this->smarty->assign( 'error_code', $error_code );
-        $this->smarty->assign( 'user', $this->_user );
         $this->view( __FUNCTION__ );
     }
 
@@ -146,44 +148,84 @@ class Payment extends MY_Controller {
 
     // {{{ public function out()
     /**
-     * 出金処理 ログを残す
-     * 実際の出金はアプリ側で行なう予定なので出金結果からログを登録するだけ
+     * 出金処理
      */
     public function out()
     {
-        $history = $this->Gamemoneylog->getByUserIdAtLatest( $this->_user['user_id'] );
-        $this->smarty->assign( 'history', $history );
+        $post = $this->input->post();
+        $error_msg = '';
+
         $this->smarty->assign( 'user', $this->_user );
-        $this->view( __FUNCTION__ );
+        if ( isset( $post['check'] ) ) {
+            $this->_set_validation( my_const::PAYMENT_PAYMENT_NUM_OUTCACH );
+            if ( $this->form_validation->run() ) {
+                $this->smarty->assign( 'post', $post );
+                $this->view( 'outconfirm' );
+            } else {
+                $error_msg = $this->form_validation->error_string();
+                $this->smarty->assign( 'error_msg', $error_msg );
+                $this->view( __FUNCTION__ );
+            }
+        } else {
+            $this->smarty->assign( 'error_msg', $error_msg );
+            $this->view( __FUNCTION__ );
+        }
     }
     // }}}
 
-    // {{{ public function outconfirm()
+    // {{{ public function outredirect()
     /**
      * 出金処理 ログを残す
      * 実際の出金はアプリ側で行なう予定なので出金結果からログを登録するだけ
      */
-    public function outconfirm()
+    public function outredirect()
     {
-        $history = $this->Gamemoneylog->getByUserIdAtLatest( $this->_user['user_id'] );
-        $this->smarty->assign( 'history', $history );
+        // last log
+        $log_data = $this->Gamemoneylog->getByUserIdAtLatest( $this->_user['user_id'] );
+        // log insert
+        $params = array(
+            'user_id'    => $this->_user['user_id'],
+            'user_email' => $this->_user['user_email'],
+            'nickname'   => $this->_user['nickname'],
+            'category'   => my_const::LOG_REASON_INVESTIMENT,
+            'num'        => $post['pay_number'],
+            'remain'     => $log_data['remain'] - $post['pay_number'],
+            'reason'     => my_const::LOG_REASON_INVESTIMENT,
+        );
+        $this->db->trans_begin();
+        $this->Gamemoneylog->insert( $params );
+        if ( $this->db->trans_status() === false ) {
+            // ロールバック
+            $this->db->trans_rollback();
+        }
+        // コミット
+        $this->db->trans_commit();
+
+        $transfer_amount = $post['pay_number'];
+        $transfer_method = 'cash_out';
+        $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method );
+
         $this->smarty->assign( 'user', $this->_user );
         $this->view( __FUNCTION__ );
+
     }
     // }}}
 
-    // {{{ public function outcomplete()
+    // {{{ public function outcomplete( $succmsg = 1 )
     /**
-     * 出金処理 ログを残す
-     * 実際の出金はアプリ側で行なう予定なので出金結果からログを登録するだけ
+     * 出金完了ページ
+     * @params int $succmsg APIからのリダイレクトクエリ 1:成功 他:失敗
      */
-    public function outcomplete()
+    public function outcomplete( $succmsg = 1 )
     {
-        $history = $this->Gamemoneylog->getByUserIdAtLatest( $this->_user['user_id'] );
-        $this->smarty->assign( 'history', $history );
-        $this->smarty->assign( 'user', $this->_user );
+        $params = array( 'error_id' => $succmsg, 'cash_kind' => my_const::LOG_REASON_INVESTMENT );
+        // paramsの設定があるのでconstructで呼べない為、例外的にここでload
+        $this->load->library( 'MY_errCode', $params );
+        $error_code = $this->my_errcode;
+        $this->smarty->assign( 'error_code', $error_code );
         $this->view( __FUNCTION__ );
     }
+
     // }}}
 
     // {{{ private function _set_validation()

@@ -36,7 +36,7 @@ public $ci;
 
 	public function transfer_money_then_redirect($transfer_amount, $transfer_method, $recommender_id = '') {
 
-		$encryptor = $this->ci->my_stringEncrypter;
+		$encryptor = $this->ci->my_stringencrypter;
 		$encryptor->set_key_iv($this->encryption_key, $this->encryption_key);
 		$onetime_access_key = md5(rand() . $this->secret_key . rand()) . md5(rand() . $this->secret_key . rand()) . uniqid();
 
