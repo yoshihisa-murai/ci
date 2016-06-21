@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 文言関連の定数
  */
 class MY_const {
-    const MAIL_SUBJECT_PREREGIST = '仮登録が完了しました。';
+    const MAIL_SUBJECT_PREREGIST = 'お問い合わせを受け付けました。';
     const MAIL_SUBJECT_TMPPASS   = 'パスワード変更';
     const REGIST_COMPLETE        = '会員登録が完了しました。';
     const INVALID_ACCESS         = '不正なアクセスです。';
@@ -30,6 +30,7 @@ class MY_const {
     const PAYMENT_PAYMENT_NUM_INCACH    = '入金金額';
     const PAYMENT_PAYMENT_NUM_OUTCACH   = '出金金額';
     const FORM_NETELLER_ID       = 'ネッテラーID';
+    const FORM_INFO_TEXTAREA     = 'お問い合わせ内容';
 
     /**
      * 入出金理由

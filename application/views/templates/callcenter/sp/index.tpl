@@ -34,6 +34,7 @@
                                             <div>
                                                 <h2>メールによるお問い合わせ</h2>
                                                 <p style="margin-bottom:20px;">対応時間(月～金)12:00 - 24:00[日本時間]</p>
+                                                {$error_msg}
                                                 {form_open( 'callcenter' )}
                                                 <table class="regist_table">
                                                     <tr>
