@@ -28,6 +28,7 @@ $config['neteller']['payment']    = 'NETELLER入金方法';
 $config['neteller']['payoutatm']  = 'NETELLER出金(ATM)方法';
 $config['neteller']['payout']     = 'NETELLER出金方法';
 $config['agreement']['index']     = 'エンドユーザー同意書';
+$config['errors']['error_404']    = 'エラー';
 
 /**
  * Local variables:

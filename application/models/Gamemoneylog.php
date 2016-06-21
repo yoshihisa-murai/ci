@@ -67,7 +67,7 @@ class Gamemoneylog extends CI_Model {
 
     // }}}
 
-    // {{{ public function insert( $user_tmp )
+    // {{{ public function insert( $data )
     /**
      * insert 
      */
@@ -76,11 +76,11 @@ class Gamemoneylog extends CI_Model {
             'user_id' => $data['user_id'],
             'user_email' => $data['user_email'],
             'nickname' => $data['nickname'],
-            'in_money' => $data['in_money'],
-            'out_money' => $data['out_money'],
-            'remain_money' => $data['remain_money'],
+            'category' => $data['category'],
+            'num' => $data['num'],
+            'remain' => $data['remain'],
             'reason' => $data['reason'],
-            'insert_date' => 'now()',
+            'insert_date' => date( 'Y-m-d H:i:s' ),
         );
         $res = $this->db->insert( $this->_table, $data );
         if ( $res == false ) {

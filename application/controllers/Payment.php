@@ -79,16 +79,39 @@ class Payment extends MY_Controller {
             redirect( 'payment' );
         }
 
-        // paramsの設定があるのでconstructで呼べない為、例外的にここでload
+        // last log
+        $log_data = $this->Gamemoneylog->getByUserIdAtLatest( $this->_user['user_id'] );
+        // log insert
+        $params = array(
+            'user_id'    => $this->_user['user_id'],
+            'user_email' => $this->_user['user_email'],
+            'nickname'   => $this->_user['nickname'],
+            'category'   => my_const::LOG_REASON_RECEIVE,
+            'num'        => $post['pay_number'],
+            'remain'     => $log_data['remain'] + $post['pay_number'],
+            'reason'     => my_const::LOG_REASON_RECEIVE,
+        );
+        $this->db->trans_begin();
+        $this->Gamemoneylog->insert( $params );
+        if ( $this->db->trans_status() === false ) {
+            // ロールバック
+            $this->db->trans_rollback();
+//        } elseif ( ) {
+//            $this->db->trans_rollback();
+        }
+        // コミット
+        $this->db->trans_commit();
         $error_id = 1;
         $cash_kind = 1;
         $params = array( 'error_id' => $error_id, 'cash_kind' => $cash_kind );
+        // paramsの設定があるのでconstructで呼べない為、例外的にここでload
         $this->load->library( 'MY_errCode', $params );
         $error_code = $this->my_errcode;
         $transfer_amount = $post['pay_number'];
         $transfer_method = 'cash_in';
         $recommender_id = 'test1234';
 //        $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method, $recommender_id );
+
         $this->smarty->assign( 'error_code', $error_code );
         $this->smarty->assign( 'user', $this->_user );
         $this->view( __FUNCTION__ );
