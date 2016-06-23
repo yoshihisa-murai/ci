@@ -40,8 +40,8 @@
                                                     <tr>
                                                         <th>登録名</th>
                                                         <td style="border-top:1px solid #fff;">
-                                                            {form_input( 'name1' )}
-                                                            {form_input( 'name2' )}
+                                                            {form_input( 'name1', '', '', 'name1' )}
+                                                            {form_input( 'name2', '', '', 'name2' )}
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -65,7 +65,7 @@
                                                     <tr>
                                                         <th>備考</th>
                                                         <td style="border-top:1px solid #fff;">
-                                                            {form_textarea( 'info_textarea' )}
+                                                            {form_textarea( 'info_textarea', '', '', 'info_textarea' )}
                                                         </td>
                                                     </tr>
                                                 </table>
