@@ -35,10 +35,11 @@ class MY_const {
     /**
      * 入出金理由
      */
-    const LOG_REASON_FIRST      = 0; // 初期データ
-    const LOG_REASON_RECEIVE    = 1; // 入金
-    const LOG_REASON_INVESTMENT = 2; // 出金
-    const LOG_REASON_PLAY       = 3; // プレイ由来
-    const LOG_REASON_FAILD      = 9; // 失敗
+    const LOG_REASON_FIRST             = 0; // 初期データ
+    const LOG_REASON_RECEIVE           = 1; // 入金
+    const LOG_REASON_INVESTMENT        = 2; // 出金
+    const LOG_REASON_PLAY              = 3; // プレイ由来
+    const LOG_REASON_BEFORE_INVESTMENT = 4; // 出金前データ取得
+    const LOG_REASON_FAILD             = 9; // 失敗
 
 }

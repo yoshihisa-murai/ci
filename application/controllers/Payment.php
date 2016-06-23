@@ -192,6 +192,31 @@ class Payment extends MY_Controller {
      */
     public function outredirect()
     {
+        // 戻るボタンはリダイレクトで処理
+        $post = $this->input->post();
+        if ( !$post || isset( $post['back'] ) ) {
+            redirect( 'payment/out' );
+        }
+
+        // 出金APIの前に一旦ログデータを作っておく
+        $current_money = $this->my_nihtanapi->get_nihtan_money();
+        $before_params = array(
+            'user_id'    => $this->_user['user_id'],
+            'user_email' => $this->_user['user_email'],
+            'nickname'   => $this->_user['nickname'],
+            'category'   => my_const::LOG_REASON_BEFORE_INVESTMENT,
+            'num'        => 0,
+            'remain'     => $current_money,
+            'reason'     => my_const::LOG_REASON_BEFORE_INVESTMENT,
+        );
+
+        $this->db->trans_begin();
+        $this->Gamemoneylog->insert( $before_params );
+        if ( $this->db->trans_status() === false ) {
+            $this->db->trans_rollback();
+        }
+        $this->db->trans_commit();
+
         // last log
         $log_data = $this->Gamemoneylog->getByUserIdAtLatest( $this->_user['user_id'] );
         // log insert
@@ -204,21 +229,24 @@ class Payment extends MY_Controller {
             'remain'     => $log_data['remain'] - $post['pay_number'],
             'reason'     => my_const::LOG_REASON_INVESTMENT,
         );
-        $this->db->trans_begin();
-        $this->Gamemoneylog->insert( $params );
-        if ( $this->db->trans_status() === false ) {
-            // ロールバック
-            $this->db->trans_rollback();
-        }
-        // コミット
-        $this->db->trans_commit();
 
-        $this->_params['meta']['fallback_url'] = config_item( 'base_url' ) . 'payment/outcomplete';
-        $this->_params['meta']['receiver_url'] = config_item( 'base_url' ) . 'payment/outcomplete';
-        $this->load->library( 'MY_nihtanApi', $params );
-        $transfer_amount = $post['pay_number'];
-        $transfer_method = 'cash_out';
-        $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method );
+        if ( $params['remain'] > 0 ) {
+            $this->db->trans_begin();
+            $this->Gamemoneylog->insert( $params );
+            if ( $this->db->trans_status() === false ) {
+                $this->db->trans_rollback();
+            }
+            $this->db->trans_commit();
+
+            $this->_params['meta']['fallback_url'] = config_item( 'base_url' ) . 'payment/outcomplete';
+            $this->_params['meta']['receiver_url'] = config_item( 'base_url' ) . 'payment/outcomplete';
+            $this->load->library( 'MY_nihtanApi', $params );
+            $transfer_amount = $post['pay_number'];
+            $transfer_method = 'cash_out';
+            $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method );
+        } else {
+            redirect( 'payment/outcomplete?succmsg=7c' );
+        }
 
         $this->smarty->assign( 'user', $this->_user );
         $this->view( __FUNCTION__ );
