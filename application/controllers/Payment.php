@@ -110,13 +110,14 @@ class Payment extends MY_Controller {
 
     // }}}
 
-    // {{{ public function complete( $succmsg = 1 )
+    // {{{ public function complete()
     /**
      * 入金完了ページ
-     * @params int $succmsg APIからのリダイレクトクエリ 1:成功 他:失敗
      */
-    public function complete( $succmsg = 1 )
+    public function complete()
     {
+        $get = $this->input->get( 'succmsg' );
+        $succmsg = $get;
         $params = array( 'error_id' => $succmsg, 'cash_kind' => my_const::LOG_REASON_RECEIVE );
         // paramsの設定があるのでconstructで呼べない為、例外的にここでload
         $this->load->library( 'MY_errCode', $params );
@@ -225,13 +226,14 @@ class Payment extends MY_Controller {
     }
     // }}}
 
-    // {{{ public function outcomplete( $succmsg = 1 )
+    // {{{ public function outcomplete()
     /**
      * 出金完了ページ
-     * @params int $succmsg APIからのリダイレクトクエリ 1:成功 他:失敗
      */
-    public function outcomplete( $succmsg = 1 )
+    public function outcomplete()
     {
+        $get = $this->input->get( 'succmsg' );
+        $succmsg = $get;
         $params = array( 'error_id' => $succmsg, 'cash_kind' => my_const::LOG_REASON_INVESTMENT );
         // paramsの設定があるのでconstructで呼べない為、例外的にここでload
         $this->load->library( 'MY_errCode', $params );

@@ -40,8 +40,8 @@
                 <div class="main-inner group">
                     <section class="content">
                         <div class="page-title pad">
-                            <h1 class="post-title entry-title">{*<?php echo $sebu_check->message_title; ?>*}</h1>
-                            <p style="color:#fff;">{*<?php echo $sebu_check->message_detail; ?>*}</p>
+                            <h1 class="post-title entry-title">{$error_code->message_title}</h1>
+                            <p style="color:#fff;">{$error_code->message_detail}</p>
                         </div><!--/.page-title-->
         
                     </section>
