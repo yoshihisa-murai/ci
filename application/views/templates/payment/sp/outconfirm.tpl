@@ -17,20 +17,32 @@
                         <div class="page-title pad">
                             <h1 class="post-title entry-title">出金確認画面</h1>
                             <p style="color:#fff;">このページでは、コインを変換し出金が行えます。</p>
-                            <p class="withdrawal_p">現在の引き出し可能な金額は<span>${$history.remain|number_format}</span>です。</p>
+                            <p class="withdrawal_p">現在の引き出し可能な金額は<span>${$current_money|default:0|number_format}</span>です。</p>
                         </div><!--/.page-title-->
 
                         <div class="pad group">
                             <article class="post-21 post type-post status-publish format-standard has-post-thumbnail hentry category-3">
                                 <div class="entry share">
-                                    <form action="withdrawal.php" method="post" enctype="multipart/form-data">
+                                    {form_hidden( 'pay_number', $post.pay_number )}
+                                    {form_hidden( 'neteller_id', $post.neteller_id )}
+                                    {form_hidden( 'password', $post.neteller_pass )}
+                                    {form_open( 'payment/outredirect' )}
                                         <div class="entry-inner clearfix">
                                             <table class="regist_table">
                                                 <tr>
-                                                    <th>出金金額(USD)</th><td style="border-top:1px solid #fff;"></td>
+                                                    <th>出金金額(USD)</th>
+                                                    <td style="border-top:1px solid #fff;">
+                                                        ${$post.pay_number|number_format}
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>NETELLER ID</th><td></td>
+                                                    <th>NETELLER ID</th>
+                                                    <td>
+                                                        {$post.neteller_id}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>PASSWORD</th><td style="text-align:left;">非表示</td>
                                                 </tr>
                                             </table>
                                             <div style="text-align:center;">

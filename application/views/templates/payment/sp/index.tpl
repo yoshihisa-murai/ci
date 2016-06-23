@@ -17,12 +17,11 @@
                         <div class="page-title pad">
                             <h1 class="post-title entry-title">入金画面</h1>
                             <p style="color:#fff;">このページでは、コインのご購入が行えます。</p>
-                            {*<?php echo $err_div; ?>*}
+                            <div class="error">{$error_msg}</div>
                         </div><!--/.page-title-->
                         <div class="pad group">
                             <article class="post-21 post type-post status-publish format-standard has-post-thumbnail hentry category-3">
                                 <div class="entry share">
-                                    <div class="error">{$error_msg}</div>
                                     {form_open( 'payment' )}
                                         <div class="entry-inner clearfix">
                                             <table class="regist_table">

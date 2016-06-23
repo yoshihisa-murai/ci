@@ -6,6 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Payment extends MY_Controller {
 
+    private $_params;
+
     // {{{ public function __construct()
     /** 
      * コンストラクタ
@@ -15,13 +17,13 @@ class Payment extends MY_Controller {
         parent::__construct();
         // モデルロード
         $this->load->model( 'Gamemoneylog' );
-        $params['meta'] = array(
+        $this->_params['meta'] = array(
             'client_id' => 'ModuleTestID0001',
             'client_username' => 'ModuleTest',
-            'fallback_url' => 'http://test.planx.jp/casino/payment/complete',
-            'receiver_url' => 'http://test.planx.jp/casino/payment/complete' // Point your domain or IP here then the path to the receiver php file
+            'fallback_url' => '',
+            'receiver_url' => ''
         );
-        $this->load->library( 'MY_nihtanApi', $params );
+        $this->load->library( 'MY_nihtanApi', $this->_params );
         if ( ! $this->my_user->is_login() ) {
             redirect( 'top' );
         }
@@ -40,7 +42,8 @@ class Payment extends MY_Controller {
 
         $this->smarty->assign( 'user', $this->_user );
         if ( isset( $post['check'] ) ) {
-            $this->_set_validation( my_const::PAYMENT_PAYMENT_NUM_INCACH );
+            $this->form_validation->set_rules( "pay_number", my_const::PAYMENT_PAYMENT_NUM_INCACH, "required|is_natural_no_zero|greater_than_equal_to[5]" );
+            $this->_set_validation();
             if ( $this->form_validation->run() ) {
                 $this->smarty->assign( 'post', $post );
                 $this->view( 'confirm' );
@@ -94,6 +97,9 @@ class Payment extends MY_Controller {
         // コミット
         $this->db->trans_commit();
 
+        $this->_params['meta']['fallback_url'] = config_item( 'base_url' ) . 'payment/complete';
+        $this->_params['meta']['receiver_url'] = config_item( 'base_url' ) . 'payment/complete';
+        $this->load->library( 'MY_nihtanApi', $this->_params );
         $transfer_amount = $post['pay_number'];
         $transfer_method = 'cash_in';
         $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method );
@@ -152,12 +158,17 @@ class Payment extends MY_Controller {
      */
     public function out()
     {
+        $this->params = 'test';
         $post = $this->input->post();
         $error_msg = '';
 
+        // todo:プレイデータのデータを取得
+        $current_money = $this->my_nihtanapi->get_nihtan_money();
+        $this->smarty->assign( 'current_money', $current_money );
         $this->smarty->assign( 'user', $this->_user );
         if ( isset( $post['check'] ) ) {
-            $this->_set_validation( my_const::PAYMENT_PAYMENT_NUM_OUTCACH );
+            $this->form_validation->set_rules( "pay_number", my_const::PAYMENT_PAYMENT_NUM_OUTCACH, "required|is_natural_no_zero|greater_than_equal_to[50]" );
+            $this->_set_validation();
             if ( $this->form_validation->run() ) {
                 $this->smarty->assign( 'post', $post );
                 $this->view( 'outconfirm' );
@@ -187,10 +198,10 @@ class Payment extends MY_Controller {
             'user_id'    => $this->_user['user_id'],
             'user_email' => $this->_user['user_email'],
             'nickname'   => $this->_user['nickname'],
-            'category'   => my_const::LOG_REASON_INVESTIMENT,
+            'category'   => my_const::LOG_REASON_INVESTMENT,
             'num'        => $post['pay_number'],
             'remain'     => $log_data['remain'] - $post['pay_number'],
-            'reason'     => my_const::LOG_REASON_INVESTIMENT,
+            'reason'     => my_const::LOG_REASON_INVESTMENT,
         );
         $this->db->trans_begin();
         $this->Gamemoneylog->insert( $params );
@@ -201,6 +212,9 @@ class Payment extends MY_Controller {
         // コミット
         $this->db->trans_commit();
 
+        $this->_params['meta']['fallback_url'] = config_item( 'base_url' ) . 'payment/outcomplete';
+        $this->_params['meta']['receiver_url'] = config_item( 'base_url' ) . 'payment/outcomplete';
+        $this->load->library( 'MY_nihtanApi', $params );
         $transfer_amount = $post['pay_number'];
         $transfer_method = 'cash_out';
         $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method );
@@ -232,9 +246,8 @@ class Payment extends MY_Controller {
     /**
      * バリデーション
      */
-    private function _set_validation( $text )
+    private function _set_validation()
     {
-        $this->form_validation->set_rules( "pay_number", $text, "required|is_natural_no_zero|greater_than_equal_to[5]" );
         $this->form_validation->set_rules( "neteller_id", my_const::FORM_NETELLER_ID, "required" );
         $this->form_validation->set_rules( "neteller_pass", my_const::FORM_PASSWORD, "required" );
     }
