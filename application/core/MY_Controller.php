@@ -20,7 +20,7 @@ class MY_Controller extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->library( 'user_agent' );
+        $this->load->library( 'MY_User_agent', '', 'agent' );
         $this->smarty->template_dir = APPPATH . 'views/templates';
         $this->smarty->compile_dir  = APPPATH . 'views/templates_c';
 //        $this->template = 'layout.tpl';
