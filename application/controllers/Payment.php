@@ -134,24 +134,18 @@ class Payment extends MY_Controller {
      */
     public function history( $page = 0 )
     {
+        $pagination_config = $this->_config['pagination'];
+        $pagination_config['base_url'] = config_item( 'base_url' ) . 'payment/history';
+        $pagination_config['per_page'] = my_const::PAGINATION_PER_PAGE;
+        $pagination_config['total_rows'] = $this->Gamemoneylog->getCountByUserId( $this->_user['user_id'] );
 
-        $pagination_config = $this->_config;
-        $pagination_config = array(
-            'base_url' => config_item( 'base_url' ) . 'payment/history',
-            'total_rows' => $this->Gamemoneylog->getCountByUserId( $this->_user['user_id'] ),
-            'per_page' => my_const::PAGINATION_PER_PAGE,
-            'first_link' => '最初',
-            'last_link' => '最後',
-            'next_link' => '次へ',
-            'prev_link' => '前へ',
-        );
-        $game_money = $this->Gamemoneylog->getByUserIdList( $this->_user['user_id'], $page, $pagination_config['per_page'] );
+        $history = $this->Gamemoneylog->getByUserIdList( $this->_user['user_id'], $page, $pagination_config['per_page'] );
 
         $this->pagination->initialize( $pagination_config );
         $pager = $this->pagination->create_links();
 
         $this->smarty->assign( 'pager', $pager );
-        $this->smarty->assign( 'history', $game_money );
+        $this->smarty->assign( 'history', $history );
         $this->smarty->assign( 'user', $this->_user );
         $this->view( __FUNCTION__ );
     }

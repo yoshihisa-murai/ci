@@ -43,6 +43,7 @@ class MY_Controller extends CI_Controller {
         } else {
             $agent_template = 'pc/' . $template;
         }
+        $this->smarty->assign( 'config', $this->_config );
         $this->smarty->assign( 'content_tpl', strtolower( get_class( $this ) ) . '/' . $agent_template . '.tpl' );
         $this->smarty->assign( 'page_title', $this->_config[strtolower( get_class( $this ) )][$template] );
 

@@ -513,3 +513,24 @@ $config['show_in_log'] = array( 'ERROR', 'DEBUG', 'INFO' );
  */
 $config['game_url']['ios'] = 'https://build.phonegap.com/apps/2064697/install/eXMsbS-4RzNvKNKS3-AK';
 $config['game_url']['android'] = 'http://www.nihtan.com/download/.Nihtan-release.apk';
+
+$config['pagination'] = array(
+    'full_tag_open' => '<ul class="pager">',
+    'full_tag_close' => '</ul>',
+    'first_link' => '最初',
+    'first_tag_open' => '<li>',
+    'first_tag_close' => '</li>',
+    'last_link' => '最後',
+    'last_tag_open' => '<li>',
+    'last_tag_close' => '</li>',
+    'next_link' => '次へ',
+    'next_tag_open' => '<li>',
+    'next_tag_close' => '</li>',
+    'prev_link' => '前へ',
+    'prev_tag_open' => '<li>',
+    'prev_tag_close' => '</li>',
+    'cur_tag_open' => '<li class="active">',
+    'cur_tag_close' => '</li>',
+    'num_tag_open' => '<li>',
+    'num_tag_close' => '</li>',
+);

@@ -23,15 +23,15 @@
                                     <div class="entry-inner clearfix">
                                         <table class="regist_table">
                                             <tr>
-                                                <th>入出金日時</th><th>種別</th><th>金額</th><th>入出金直後のコイン残高</th>
+                                                <th>入出金日時</th><th>種別</th><th>金額</th><th>入出金直後の<br />コイン残高</th>
                                             </tr>
-                        {foreach from=$history item=value}
-                            <tr>
-                                <td>{$value.insert_date}</td><td>{$value.category}</td><td>${$value.num|number_format}</td><td>${$value.remain|number_format}</td>
-                            </tr>
-                        {/foreach}
+                                            {foreach from=$history item=value}
+                                            <tr>
+                                                <td>{$value.insert_date|date_format:"%G-%m-%d<br />%H:%M:%S"}</td><td>{$config['payment_category'][$value.category]}</td><td>${$value.num|number_format}</td><td>${$value.remain|number_format}</td>
+                                            </tr>
+                                            {/foreach}
                                         </table>
-                        {$pager}
+                                        {$pager}
                                         <h3>ユーザー登録情報</h3>
                                         <table class="regist_table">
                                             <tr>

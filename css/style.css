@@ -1102,3 +1102,7 @@ article.grid-3c .post_description{padding:25px}
 #nav-topbar ul.nav > li:after {
 	background-color:#000;
 }
+ul.pager {display:inline-block;padding:0;margin:0;text-align:center;}
+ul.pager li {display:inline;float:left;padding:8px 16px;text-decoration:none;list-style:none;border:1px solid #eee;margin:2px;border-radius:5px;}
+ul.pager li a {color:#eee;}
+ul.pager li.active {background:#c00;color:#eee;border:1px solid #c00;border-radius:5px;}
