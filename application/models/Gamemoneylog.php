@@ -42,7 +42,7 @@ class Gamemoneylog extends CI_Model {
      */
     public function getCountByUserId( $user_id ) {
         $this->db->where( 'user_id', $user_id );
-        $res = $this->db->count_all( $this->_table );
+        $res = $this->db->count_all_results( $this->_table );
         return $res;
     }
 
@@ -56,7 +56,7 @@ class Gamemoneylog extends CI_Model {
     public function getByUserIdList( $user_id, $start, $num ) {
         $this->db->where( 'user_id', $user_id );
         $this->db->order_by( 'insert_date', 'desc' );
-        $this->db->limit( $start, $num );
+        $this->db->limit( $num, $start );
         $query = $this->db->get( $this->_table );
         $res = array();
         foreach( $query->result() as $row ) {

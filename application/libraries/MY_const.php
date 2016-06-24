@@ -42,4 +42,5 @@ class MY_const {
     const LOG_REASON_BEFORE_INVESTMENT = 4; // 出金前データ取得
     const LOG_REASON_FAILD             = 9; // 失敗
 
+    const PAGINATION_PER_PAGE = 10; // ページャ
 }

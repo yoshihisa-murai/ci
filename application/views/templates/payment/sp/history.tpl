@@ -31,6 +31,7 @@
                             </tr>
                         {/foreach}
                                         </table>
+                        {$pager}
                                         <h3>ユーザー登録情報</h3>
                                         <table class="regist_table">
                                             <tr>
