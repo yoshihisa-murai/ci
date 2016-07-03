@@ -43,6 +43,8 @@ class Signup extends MY_Controller {
         $this->smarty->assign( 'sex', $this->_config['sex'] ); 
         $this->smarty->assign( 'kiyaku', $kiyaku ); 
         if ( $this->form_validation->run() == false ) {
+            $error_msg = $this->form_validation->error_string();
+            $this->smarty->assign( 'error_msg', $error_msg );
             $this->view( __FUNCTION__ );
         } else {
             $this->smarty->assign( 'post', $this->input->post() ); 
@@ -115,6 +117,7 @@ class Signup extends MY_Controller {
         $this->form_validation->set_rules( "mobile1", my_const::FORM_MOBILE1, "required|trim|htmlspecialchars|exact_length[3]|numeric" );
         $this->form_validation->set_rules( "mobile2", my_const::FORM_MOBILE2, "required|trim|htmlspecialchars|exact_length[4]|numeric" );
         $this->form_validation->set_rules( "mobile3", my_const::FORM_MOBILE3, "required|trim|htmlspecialchars|exact_length[4]|numeric" );
+        $this->form_validation->set_rules( "kiyaku", my_const::FORM_KIYAKU, "required" );
     }
     // }}}
  

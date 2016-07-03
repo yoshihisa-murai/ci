@@ -1,3 +1,6 @@
+.entry .wp-caption,.entry table tr.alt{background:none;}
+
+
 .cf:after
 {
 	content: "."; 
@@ -62,15 +65,16 @@
 	border:none;
 }
 
-.regist_table tr:nth-child(even) td,.regist_table tr:nth-child(even) th
+.regist_table tr:nth-child(even) td, .regist_table tr:nth-child(even) th
 {  
-  background-color:rgba(0,0,0,0.8);  
+  background-color:rgba(0,0,0,0.4);  
 }  
 
-.regist_table select
+.regist_table th
 {
-	color:#fff;
+	color:#6bb2fb;
 }
+
 
 .agreement_box
 {
@@ -145,6 +149,45 @@
 	margin-top:20px;
 }
 
+.error
+{
+	color:#ff0000;
+	background:#ccc;
+	padding:10px;
+	margin:10px;
+}
+
+.withdrawal_p
+{
+	margin-top:20px;
+	color:#fff;
+	font-size:20px;
+}
+
+.withdrawal_p span
+{
+	font-size:20px;
+	color:#f1c208;
+	font-weight:bold;
+}
+
+strong.win
+{
+	color:#2481f4;
+	font-size:20px;
+}
+
+strong.lose
+{
+	color:#f42473;
+	font-size:20px;
+}
+
+.def_p
+{
+	color:#fff;
+}
+
 @media only screen and (min-width: 415px)
 {
 	#topsp{display:none;}
@@ -197,6 +240,12 @@
 		box-sizing:border-box;
 		padding:10px;
 	}
+
+	.info_textarea
+	{
+		width:300px;
+		height:250px;
+	}
 }
 @media screen and (max-width:414px)
 {
@@ -215,5 +264,10 @@
 	.neteller_box
 	{
 		margin-top:100px;
+	}
+	.info_textarea
+	{
+		width:250px;
+		height:250px;
 	}
 }

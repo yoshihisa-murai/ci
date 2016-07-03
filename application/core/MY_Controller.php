@@ -38,20 +38,10 @@ class MY_Controller extends CI_Controller {
      * テンプレート共通化
      */
     public function view( $template ) {
-        if ( $this->agent->is_mobile() ) {
-            $agent_template = 'sp/' . $template;
-        } else {
-            $agent_template = 'pc/' . $template;
-        }
         $this->smarty->assign( 'config', $this->_config );
-        $this->smarty->assign( 'content_tpl', strtolower( get_class( $this ) ) . '/' . $agent_template . '.tpl' );
+        $this->smarty->assign( 'content_tpl', strtolower( get_class( $this ) ) . '/' .  $template . '.tpl' );
         $this->smarty->assign( 'page_title', $this->_config[strtolower( get_class( $this ) )][$template] );
-
-        if ( $this->agent->is_mobile() ) {
-            $this->template = "common/sp/layout.tpl";
-        } else {
-            $this->template = "common/pc/layout.tpl";
-        }
+        $this->template = "common/layout.tpl";
     }
 
     // }}}

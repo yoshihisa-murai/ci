@@ -1,6 +1,6 @@
 <body class="single single-post postid-21 single-format-standard col-1c full-width topbar-enabled unknown">
 <div id="wrapper">
-{include file='common/sp/header.tpl'}
+{include file='common/header.tpl'}
 
     <div class="container container_bg" id="page">
         <div id="head_space" class="clearfix"> 
@@ -51,8 +51,8 @@
     <div id="page-top">
         <p><a id="move-page-top"><i class="fa fa-angle-up"></i></a></p>
     </div>
-    {include file='common/sp/footer.tpl'}
+    {include file='common/footer.tpl'}
 </div>
 <!--/#wrapper-->
-{include file='common/sp/footer_script.tpl'}
-{include file='common/sp/navi.tpl'}
+{include file='common/footer_script.tpl'}
+{include file='common/navi.tpl'}

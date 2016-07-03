@@ -1,6 +1,6 @@
 <body class="single single-post postid-21 single-format-standard col-1c full-width topbar-enabled unknown">
 <div id="wrapper">
-{include file='common/sp/header.tpl'}
+{include file='common/header.tpl'}
 
     <div class="container container_bg" id="page">
         <div id="head_space" class="clearfix"> 
@@ -17,7 +17,9 @@
                         <div class="page-title pad">
                             <h1 class="post-title entry-title">出金画面</h1>
                             <p style="color:#fff;">このページでは、コインを変換し出金が行えます。</p>
+                            {if $error_msg}
                             <div class="error">{$error_msg}</div>
+                            {/if}
                             <p class="withdrawal_p">現在の引き出し可能な金額は<span>${$current_money|default:0|number_format}</span>です。</p>
                         </div><!--/.page-title-->
 
@@ -74,8 +76,8 @@
     <div id="page-top">
         <p><a id="move-page-top"><i class="fa fa-angle-up"></i></a></p>
     </div>
-    {include file='common/sp/footer.tpl'}
+    {include file='common/footer.tpl'}
 </div>
 <!--/#wrapper-->
-{include file='common/sp/footer_script.tpl'}
-{include file='common/sp/navi.tpl'}
+{include file='common/footer_script.tpl'}
+{include file='common/navi.tpl'}
