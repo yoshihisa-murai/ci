@@ -13,5 +13,5 @@ require valid-user
 # END heteml
 
 RewriteEngine on
-RewriteCond $1 !^(index\.php|images|robots\.txt|(.*)\.css|(.*)\.js)
+RewriteCond $1 !^(index\.php|images|fonts|robots\.txt|(.*)\.css|(.*)\.js)
 RewriteRule ^(.*)$ /casino/index.php/$1 [L]

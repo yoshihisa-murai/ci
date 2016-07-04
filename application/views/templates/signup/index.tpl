@@ -92,7 +92,7 @@
                                             <td colspan="2">{html_checkboxes name='kiyaku' options=$kiyaku}私は満18歳以上で<a style="color:#e9bc06;" href="{'/'|base_url}agreement">カジノ規約</a>に同意します。</td>
                                         </tr>
                                     </table>
-                                    <div style="text-align:center;">{form_submit('submit', '確認画面へ')}</div>
+                                    <div style="text-align:center;">{form_submit('submit', '確認画面へ', '', 'login_btn')}</div>
                                 </div>
                             </div>
                             <!--/.entry-->

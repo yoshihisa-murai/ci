@@ -59,7 +59,8 @@
 }
 @media only screen and (max-width: 738px) {
 .post-list-3c .page, .post-list-3c .post {width:100%;}
-*{font-family:Helvetica;-webkit-appearance:none}
+/**{font-family:Helvetica;-webkit-appearance:none}*/
+*{font-family:Helvetica;}
 .image-container { height:150px;}
 .flexslider .slides>li .slider_image{height:300px}
 .palla .parallax{height:210px!important;background-size:150% auto!important}

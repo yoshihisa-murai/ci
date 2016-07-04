@@ -498,7 +498,7 @@ if ( ! function_exists('form_submit'))
      * @param    mixed
      * @return    string
      */
-    function form_submit($data = '', $value = '', $extra = '')
+    function form_submit($data = '', $value = '', $extra = '', $class)
     {
         $defaults = array(
             'type' => 'submit',
@@ -506,7 +506,7 @@ if ( ! function_exists('form_submit'))
             'value' => $value
         );
 
-        return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." />\n";
+        return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." class=" . $class . " />\n";
     }
 }
 
