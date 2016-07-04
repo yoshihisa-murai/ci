@@ -117,7 +117,7 @@ class Signup extends MY_Controller {
         $this->form_validation->set_rules( "mobile1", my_const::FORM_MOBILE1, "required|trim|htmlspecialchars|exact_length[3]|numeric" );
         $this->form_validation->set_rules( "mobile2", my_const::FORM_MOBILE2, "required|trim|htmlspecialchars|exact_length[4]|numeric" );
         $this->form_validation->set_rules( "mobile3", my_const::FORM_MOBILE3, "required|trim|htmlspecialchars|exact_length[4]|numeric" );
-        $this->form_validation->set_rules( "kiyaku", my_const::FORM_KIYAKU, "required" );
+        $this->form_validation->set_rules( "kiyaku[]", my_const::FORM_KIYAKU, "required" );
     }
     // }}}
  
