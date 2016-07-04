@@ -107,7 +107,7 @@
                                 <th>建物名と部屋番</th><td>{$post.add_no2}</td>
                             </tr>
                         </table>
-                        <div style="text-align:center;">{form_submit('submit', '登録')}</div>
+                        <div style="text-align:center;">{form_submit('submit', '登録', '', 'login_btn')}</div>
                     </div>
                 </div>
                 <!--/.entry-->

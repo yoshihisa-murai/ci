@@ -62,19 +62,21 @@ class Signup extends MY_Controller {
     {
         $post = $this->input->post();
 
-        // トランザクション開始
-        $this->db->trans_begin();
-        $last_insert_id = $this->User->insert( $post );
-        if ( $last_insert_id > 0 ) {
-            $this->my_gamemoney->set_firstdata( $last_insert_id, $post );
+        if ( $post ) {
+            // トランザクション開始
+            $this->db->trans_begin();
+            $last_insert_id = $this->User->insert( $post );
+            if ( $last_insert_id > 0 ) {
+                $this->my_gamemoney->set_firstdata( $last_insert_id, $post );
+            }
+
+            if ( $this->db->trans_status() === false ) {
+                // ロールバック
+                $this->db->trans_rollback();
+            }
+            // コミット
+            $this->db->trans_commit();
         }
- 
-        if ( $this->db->trans_status() === false ) {
-            // ロールバック
-            $this->db->trans_rollback();
-        }
-        // コミット
-        $this->db->trans_commit();
 
         $this->view( __FUNCTION__ );
     }

@@ -28,13 +28,14 @@ class MY_gamemoney {
     public function set_firstdata( $user_id, $user )
     {
         $data = array(
-            'user_id'      => $user_id,
-            'user_email'   => $user['user_email'],
-            'nickname'     => $user['nickname'],
-            'in_money'     => 0,
-            'out_money'    => 0,
-            'remain_money' => 0,
-            'reason'       => my_const::LOG_REASON_FIRST,
+            'user_id'     => $user_id,
+            'user_email'  => $data['user_email'],
+            'nickname'    => $data['nickname'],
+            'category'    => $data['category'],
+            'num'         => $data['num'],
+            'remain'      => $data['remain'],
+            'reason'      => my_const::LOG_REASON_FIRST,
+            'insert_date' => date( 'Y-m-d H:i:s' ),
         );
         return $this->ci->Gamemoneylog->insert( $data );
     }

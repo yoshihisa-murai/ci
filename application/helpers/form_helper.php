@@ -498,15 +498,19 @@ if ( ! function_exists('form_submit'))
      * @param    mixed
      * @return    string
      */
-    function form_submit($data = '', $value = '', $extra = '', $class)
+    function form_submit($data = '', $value = '', $extra = '', $class_name = '')
     {
         $defaults = array(
             'type' => 'submit',
             'name' => is_array($data) ? '' : $data,
             'value' => $value
         );
+        if( isset( $class_name ) ) {
+            $class = ' class=' . $class_name;
+        }
 
-        return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." class=" . $class . " />\n";
+
+        return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra).$class. " />\n";
     }
 }
 
