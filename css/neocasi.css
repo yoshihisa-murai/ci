@@ -1,14 +1,19 @@
 .entry .wp-caption,.entry table tr.alt{background:none;}
 
-
 .cf:after
 {
 	content: "."; 
 	display: block;
 	height: 0; 
 	font-size:0;
-	clear: both; 
+	clear: both;
 	visibility:hidden;
+}
+
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;Å@
 }
 
 #trigger-overlay
@@ -52,6 +57,7 @@
 .container-inner2
 {
 	background-color:rgba(0,0,0,0.6);
+	padding-top:10px;
 }
 
 .def_table td,.def_table th
@@ -103,15 +109,18 @@
 	padding-bottom:5px;
 }
 
-.login_block
+
+
+.login_b_l
 {
-/*
-	background-image:url("img/login_bg1.png"),url("img/login_bg1.png");
-	background-repeat:no-repeat,no-repeat;
-	background-position:top center, bottom center;
-*/
-	text-align:center;
-	margin-bottom:50px;
+	float:left;
+	padding-right:10px;
+	box-sizing:border-box;
+}
+
+.login_b_r
+{
+	float:left;
 }
 
 .neteller_h2
@@ -188,7 +197,22 @@ strong.lose
 	color:#fff;
 }
 
-@media only screen and (min-width: 415px)
+.top_ul li
+{
+	float:left;
+}
+
+.top_h2
+{
+	color:#fff;
+	font-size:24px;
+	margin-top:20px;
+	font-weight:bold;
+	text-align:center;
+}
+	
+
+@media only screen and (min-width: 769px)
 {
 	#topsp{display:none;}
 	.content_all
@@ -246,8 +270,31 @@ strong.lose
 		width:300px;
 		height:250px;
 	}
+
+	.top_ul li img
+	{
+		max-width:300px;
+	}
+
+	.login_block
+	{
+	/*
+		background-image:url("img/login_bg1.png"),url("img/login_bg1.png");
+		background-repeat:no-repeat,no-repeat;
+		background-position:top center, bottom center;
+	*/
+		text-align:center;
+		width:908px;
+		margin:0 auto;
+	}
+
+	.login_block_sp
+	{
+		display:none;
+	}
 }
-@media screen and (max-width:414px)
+
+@media only screen and (max-width: 768px)
 {
 	#toppc{display:none;}
 	#topsp{height:647px;}
@@ -270,4 +317,143 @@ strong.lose
 		width:250px;
 		height:250px;
 	}
+
+	.top_ul
+	{
+		width:100%
+	}
+	.top_ul li
+	{
+		width:50%;
+	}
+	
+	.sp_margin_bottom20
+	{
+		margin-bottom:20px;
+	}
+
+	
+	.login_block
+	{
+	/*
+		background-image:url("img/login_bg1.png"),url("img/login_bg1.png");
+		background-repeat:no-repeat,no-repeat;
+		background-position:top center, bottom center;
+
+		text-align:center;
+		width:908px;
+		margin:0 auto;
+	*/
+		display:none;
+	}
+	.login_block_sp
+	{
+		text-align:center;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	.login_block_sp img
+	{
+		
+	}
+	
+	.login_b_l
+	{
+		width:50%;
+	}
+	
+	.login_b_r
+	{
+		width:50%;
+	}
+
+	.top_game
+	{
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+}
+
+@media screen and (max-width:640px)
+{
+	#toppc{display:none;}
+	#topsp{height:647px;}
+	.sp_top1
+	{
+		margin-top:20px;
+	}
+	
+	.up_margin
+	{
+		margin-top:-80px;
+	}
+
+	.top_game
+	{
+		margin-top:20px;
+	}
+
+	.neteller_box
+	{
+		margin-top:100px;
+	}
+	.info_textarea
+	{
+		width:250px;
+		height:250px;
+	}
+
+	.top_ul
+	{
+		width:100%
+	}
+	.top_ul li
+	{
+		width:50%;
+	}
+	
+	.sp_margin_bottom20
+	{
+		margin-bottom:20px;
+	}
+
+	
+	.login_block
+	{
+	/*
+		background-image:url("img/login_bg1.png"),url("img/login_bg1.png");
+		background-repeat:no-repeat,no-repeat;
+		background-position:top center, bottom center;
+
+		text-align:center;
+		width:908px;
+		margin:0 auto;
+	*/
+		display:none;
+	}
+	.login_block_sp
+	{
+		text-align:center;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	.login_block_sp img
+	{
+		
+	}
+	
+	.login_b_l
+	{
+		width:50%;
+	}
+	
+	.login_b_r
+	{
+		width:50%;
+	}
+
+	
+
 }

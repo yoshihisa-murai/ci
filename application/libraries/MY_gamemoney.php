@@ -29,11 +29,11 @@ class MY_gamemoney {
     {
         $data = array(
             'user_id'     => $user_id,
-            'user_email'  => $data['user_email'],
-            'nickname'    => $data['nickname'],
-            'category'    => $data['category'],
-            'num'         => $data['num'],
-            'remain'      => $data['remain'],
+            'user_email'  => $user['user_email'],
+            'nickname'    => $user['nickname'],
+            'category'    => $user['category'],
+            'num'         => $user['num'],
+            'remain'      => $user['remain'],
             'reason'      => my_const::LOG_REASON_FIRST,
             'insert_date' => date( 'Y-m-d H:i:s' ),
         );

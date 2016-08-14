@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="Last-Modified" content="Tue, 10 May 2016 22:58:20 GMT">
 <meta charset="UTF-8">
-<title>テスト &#8211; Just another WordPress site</title>
+<title>NEO CASINO</title>
 <meta name='robots' content='noindex,follow' />
 <meta http-equiv="Expires" content="604800">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />

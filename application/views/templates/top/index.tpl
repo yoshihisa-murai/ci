@@ -57,67 +57,19 @@
         </div>
 
         <div class="container-inner container-inner2 freespace-pad">
-            <div class="login_block">
-                <a href="{'/'|base_url}signup/"><img src="{'/'|base_url}images/regist_btn.png"></a><img id="trigger-overlay" src="{'/'|base_url}images/login_btn.png">
+            <div class="login_block cf">
+                <div class="login_b_l"><a href="{'/'|base_url}signup/"><img src="{'/'|base_url}images/regist_btn2.png"></a></div><div class="login_b_r"><img id="trigger-overlay" src="{'/'|base_url}images/login_btn2.png"></div>
             </div>
-            <div class="widget-meta">  
-                <h2 class='widgettitle wow'>イベント一覧<span class="left" style="background-color:#f1b458;"></span> <span class="right" style="background-color:#f1b458;"></span></h2>
-                <div class='subtitle wow ' data-wow-delay="0.2s">ネオカジで行われているお得なイベント一覧。</div>
+            <div class="login_block_sp cf">
+                <div class="login_b_l"><a href="{'/'|base_url}signup/"><img src="{'/'|base_url}images/regist_btnsp2.png"></a></div><div class="login_b_r"><img id="trigger-overlay" src="{'/'|base_url}images/login_btnsp2.png"></div>
             </div>
-            <div id="owl_wrapper">
-                <ul class="owl alx-slider group thumbs-enabled owl-carousel">
-                    <li class="item project-item style-1">
-                        <figure>
-                            <img width="520" height="520" src="{'/'|base_url}images/2016/05/test4-520x520.jpg" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="test4" srcset="{'/'|base_url}images/2016/05/test4-520x520.jpg 520w, {'/'|base_url}images/2016/05/test4-150x150.jpg 150w, {'/'|base_url}images/2016/05/test4-300x300.jpg 300w, {'/'|base_url}images/2016/05/test4-100x100.jpg 100w, {'/'|base_url}images/2016/05/test4.jpg 306w" sizes="(max-width: 520px) 100vw, 520px" />
-                            <figcaption>
-                                <a href="#" title="敗者キャッシュバック"></a>
-                                <div class="project-info">
-                                    <h4><a href="/kjn/2016/05/07/%e6%95%97%e8%80%85%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%83%90%e3%83%83%e3%82%af/" title="敗者キャッシュバック">敗者キャッシュバック</a></h4>
-                                    <div class="project-categories"><a href="/kjn/category/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/" rel="category tag">イベント</a></div>
-                                </div>
-                                <div class="project-links"><a href="/kjn/wp-content/uploads/2016/05/test4.jpg" data-rel="lightbox-0" title="敗者キャッシュバック"><i class="fa fa-arrows-alt"></i></a> <a title="敗者キャッシュバック" href="/kjn/2016/05/07/%e6%95%97%e8%80%85%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%83%90%e3%83%83%e3%82%af/"><i class="fa fa-share"></i></a></div>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="item project-item style-1">
-                        <figure>
-                            <img width="520" height="520" src="{'/'|base_url}images/2016/05/test3-520x520.jpg" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="test3" srcset="{'/'|base_url}images/2016/05/test3-520x520.jpg 520w, {'/'|base_url}images/2016/05/test3-150x150.jpg 150w, {'/'|base_url}image/2016/05/test3-300x300.jpg 300w, {'/'|base_url}images/2016/05/test3-100x100.jpg 100w, {'/'|base_url}images/2016/05/test3.jpg 327w" sizes="(max-width: 520px) 100vw, 520px" />
-                            <figcaption>
-                                <a href="#" title="紹介者コインバック"></a>
-                                <div class="project-info">
-                                    <h4><a href="/kjn/2016/05/07/%e7%b4%b9%e4%bb%8b%e8%80%85%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%83%90%e3%83%83%e3%82%af%e3%82%b3%e3%82%a4%e3%83%b3%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%9a%e3%83%bc%e3%83%b3/" title="紹介者コインバック">紹介者コインバック</a></h4>
-                                    <div class="project-categories"><a href="/kjn/category/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/" rel="category tag">イベント</a></div>
-                                </div>
-                                <div class="project-links"><a href="/kjn/wp-content/uploads/2016/05/test3.jpg" data-rel="lightbox-0" title="紹介者コインバック"><i class="fa fa-arrows-alt"></i></a> <a title="紹介者コインバック" href="/kjn/2016/05/07/%e7%b4%b9%e4%bb%8b%e8%80%85%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%83%90%e3%83%83%e3%82%af%e3%82%b3%e3%82%a4%e3%83%b3%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%9a%e3%83%bc%e3%83%b3/"><i class="fa fa-share"></i></a></div>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="item project-item style-1">
-                        <figure>
-                            <img width="520" height="520" src="{'/'|base_url}images/2016/05/test2-520x520.jpg" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="test2" srcset="{'/'|base_url}images/2016/05/test2-520x520.jpg 520w, {'/'|base_url}images/2016/05/test2-150x150.jpg 150w, {'/'|base_url}images/2016/05/test2-300x300.jpg 300w, {'/'|base_url}images/2016/05/test2-100x100.jpg 100w, {'/'|base_url}images/2016/05/test2.jpg 400w" sizes="(max-width: 520px) 100vw, 520px" />
-                            <figcaption>
-                                <a href="#" title="ネオカジオープンキャンペーン"></a>
-                                <div class="project-info">
-                                    <h4><a href="/kjn/2016/05/07/%e3%83%8d%e3%82%aa%e3%82%ab%e3%82%b8%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%9a%e3%83%bc%e3%83%b3/" title="ネオカジオープンキャンペーン">ネオカジオープンキャンペ...</a></h4>
-                                    <div class="project-categories"><a href="/kjn/category/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/" rel="category tag">イベント</a></div>
-                                </div>
-                                <div class="project-links"><a href="/kjn/wp-content/uploads/2016/05/test2.jpg" data-rel="lightbox-0" title="ネオカジオープンキャンペーン"><i class="fa fa-arrows-alt"></i></a> <a title="ネオカジオープンキャンペーン" href="/kjn/2016/05/07/%e3%83%8d%e3%82%aa%e3%82%ab%e3%82%b8%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%9a%e3%83%bc%e3%83%b3/"><i class="fa fa-share"></i></a></div>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="item project-item style-1">
-                        <figure>
-                            <img width="520" height="520" src="{'/'|base_url}images/2016/05/test1-520x520.jpg" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="test1" srcset="{'/'|base_url}images/2016/05/test1-520x520.jpg 520w, {'/'|base_url}images/2016/05/test1-150x150.jpg 150w, {'/'|base_url}images/2016/05/test1-300x300.jpg 300w, {'/'|base_url}images/2016/05/test1-100x100.jpg 100w, {'/'|base_url}images/2016/05/test1.jpg 557w" sizes="(max-width: 520px) 100vw, 520px" />
-                            <figcaption>
-                                <a href="#" title="入金5%コイン追加キャンペーン"></a>
-                                <div class="project-info">
-                                    <h4><a href="/kjn/2016/05/07/%e5%85%a5%e9%87%915%e3%82%b3%e3%82%a4%e3%83%b3%e8%bf%bd%e5%8a%a0%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%9a%e3%83%bc%e3%83%b3/" title="入金5%コイン追加キャンペーン">入金5%コイン追加キャン...</a></h4>
-                                    <div class="project-categories"><a href="/kjn/category/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/" rel="category tag">イベント</a></div>
-                                </div>
-                                <div class="project-links"><a href="/kjn/wp-content/uploads/2016/05/test1.jpg" data-rel="lightbox-0" title="入金5%コイン追加キャンペーン"><i class="fa fa-arrows-alt"></i></a> <a title="入金5%コイン追加キャンペーン" href="/kjn/2016/05/07/%e5%85%a5%e9%87%915%e3%82%b3%e3%82%a4%e3%83%b3%e8%bf%bd%e5%8a%a0%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%9a%e3%83%bc%e3%83%b3/"><i class="fa fa-share"></i></a></div>
-                            </figcaption>
-                        </figure>
-                    </li>
+            <h2 class="top_h2">ネオカジノのゲーム</h2>
+            <div class="top_game">
+                <ul class="top_ul cf">
+                	<li><a href="#"><img src="{'/'|base_url}images/top_baccarat.jpg"></a></li>
+					<li><a href="#"><img src="{'/'|base_url}images/top_poker.jpg"></a></li>
+					<li><a href="#"><img src="{'/'|base_url}images/top_sicbo.jpg"></a></li>
+					<li><a href="#"><img src="{'/'|base_url}images/top_toto.jpg"></a></li>
                 </ul>
             </div>
             <div class="content_all cf">
