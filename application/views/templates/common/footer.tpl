@@ -2,7 +2,6 @@
         <section class="container" id="footer-bottom">
             <div class="container-inner">
                 <div class="pad group">
-                    <div><img src="{'/'|base_url}images/under_bana.png" /></div>
                     <div class="content_all cf">
                         <div class="content_l">
                             <img src="{'/'|base_url}images/licence.png" />
@@ -13,7 +12,7 @@
                     </div>
                     <div class="footer_copyright">
                         <div id="copyright">
-                            <p>&copy; 2016.テストAll Rights Reserved.</p>
+                            <p>&copy; 2016.NEO CASINO.All Rights Reserved.</p>
                         </div>
                         <!--/#copyright-->
                     </div>
