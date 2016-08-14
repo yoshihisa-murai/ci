@@ -13,9 +13,6 @@ class Login extends MY_Controller {
     public function __construct() 
     {
         parent::__construct();
-        if( $this->_user ) {
-            redirect( 'top' );
-        }
     }
 
     // }}}
@@ -26,6 +23,9 @@ class Login extends MY_Controller {
      */
     public function index()
     {
+        if( $this->_user ) {
+            redirect( 'top' );
+        }
         // 別ページからリダイレクトしてきた場合ログイン後に元のページへ遷移
         $redirect_url = $this->input->get( 'r' ) ? $this->input->get( 'r' ) : 'top';
 
@@ -65,7 +65,7 @@ class Login extends MY_Controller {
 
     // {{{ public function logout()
     /**
-     * ログアウ
+     * ログアウト
      */
     public function logout()
     {

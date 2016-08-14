@@ -38,6 +38,12 @@ class MY_Controller extends CI_Controller {
      * テンプレート共通化
      */
     public function view( $template ) {
+        if ( isset( $this->_session['user_email'] ) && ! is_null( $this->_session['user_email'] ) ) {
+            $is_login = true;
+        } else {
+            $is_login = false;
+        }
+        $this->smarty->assign( 'is_login', $is_login );
         $this->smarty->assign( 'config', $this->_config );
         $this->smarty->assign( 'content_tpl', strtolower( get_class( $this ) ) . '/' .  $template . '.tpl' );
         $this->smarty->assign( 'page_title', $this->_config[strtolower( get_class( $this ) )][$template] );

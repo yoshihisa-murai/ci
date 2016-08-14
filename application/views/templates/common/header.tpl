@@ -15,6 +15,9 @@
                         <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">イベント</div><div class="menu_description"></div></a></li>
                         <li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://yahoo.co.jp"><div class="menu_title">help</div><div class="menu_description"></div></a></li>
                         <li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{'/'|base_url}neteller/"><div class="menu_title">NETELLER</div><div class="menu_description"></div></a></li>
+                        {if $is_login}
+                        <li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{'/'|base_url}login/logout"><div class="menu_title">ログアウト</div><div class="menu_description"></div></a></li>
+                        {/if}
                     </ul>
                 </div>
                 <div class="toggle-search"><i class="fa fa-search"></i></div>
