@@ -66,8 +66,8 @@ $config['country_num'] = array(
     '81'
 );
 $config['sex'] = array(
-    '男',
-    '女'
+    '男性',
+    '女性'
 );
 /**
  * Local variables:

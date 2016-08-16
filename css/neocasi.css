@@ -116,11 +116,15 @@ width /***/:auto;Å@
 	float:left;
 	padding-right:10px;
 	box-sizing:border-box;
+	width:50%;
+	text-align:right;
 }
 
 .login_b_r
 {
 	float:left;
+	width:50%;
+	text-align:left;
 }
 
 .neteller_h2
@@ -284,7 +288,7 @@ strong.lose
 		background-position:top center, bottom center;
 	*/
 		text-align:center;
-		width:908px;
+		width:100%;
 		margin:0 auto;
 	}
 
@@ -292,6 +296,35 @@ strong.lose
 	{
 		display:none;
 	}
+
+	.mypage_cm
+	{
+		display:none;
+	}
+
+	.mypage_cm_pc
+	{
+		
+	}
+	
+	.play_btns
+	{
+		width:100%;
+		margin-top:10px;
+	}
+	
+	.play_btns div
+	{
+		float:left;
+		width:50%;
+	}
+	
+	.play_btns_l
+	{
+		padding-right:10px;
+		box-sizing:border-box;
+	}
+	
 }
 
 @media only screen and (max-width: 768px)
@@ -331,19 +364,10 @@ strong.lose
 	{
 		margin-bottom:20px;
 	}
-
+/*
 	
 	.login_block
 	{
-	/*
-		background-image:url("img/login_bg1.png"),url("img/login_bg1.png");
-		background-repeat:no-repeat,no-repeat;
-		background-position:top center, bottom center;
-
-		text-align:center;
-		width:908px;
-		margin:0 auto;
-	*/
 		display:none;
 	}
 	.login_block_sp
@@ -367,11 +391,21 @@ strong.lose
 	{
 		width:50%;
 	}
-
+*/
 	.top_game
 	{
 		margin-top:20px;
 		margin-bottom:20px;
+	}
+
+	.mypage_cm
+	{
+		margin-bottom:10px;
+	}
+	
+	.mypage_cm_pc
+	{
+		display:none;
 	}
 }
 
@@ -418,18 +452,9 @@ strong.lose
 		margin-bottom:20px;
 	}
 
-	
+/*
 	.login_block
 	{
-	/*
-		background-image:url("img/login_bg1.png"),url("img/login_bg1.png");
-		background-repeat:no-repeat,no-repeat;
-		background-position:top center, bottom center;
-
-		text-align:center;
-		width:908px;
-		margin:0 auto;
-	*/
 		display:none;
 	}
 	.login_block_sp
@@ -453,7 +478,23 @@ strong.lose
 	{
 		width:50%;
 	}
+*/
+	.mypage_menu_btn_box
+	{
+		width:50%;
+		float:left;
+		box-sizing:border-box;
+		padding:10px;
+	}
 
-	
+	.mypage_cm
+	{
+		margin-bottom:10px;
+	}
+
+	.mypage_cm_pc
+	{
+		display:none;
+	}
 
 }

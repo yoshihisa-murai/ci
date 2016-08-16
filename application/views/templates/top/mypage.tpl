@@ -6,16 +6,16 @@
         <div id="head_space" class="clearfix"> 
             <div class="page-image">
                 <div class="image-container">
-                    <img width="960" height="440" src="{'/'|base_url}images/sub_bg_head.jpg" class="attachment-thumb-large size-thumb-large wp-post-image" alt="test3" />                   
+                    <img src="{'/'|base_url}images/sub_bg_head2.jpg" class="attachment-thumb-large size-thumb-large wp-post-image" alt="test3" />                   
                 </div>
-            </div><!--/.page-image-->
+            </div>
         </div>
         <div class="container-inner container-inner2 up_margin">
             <div class="main">
                 <div class="main-inner group">
                     <section class="content">
                         <div class="page-title pad">
-                            <h1 class="post-title entry-title">NETELLER(ネッテラー)メニュー</h1>
+                            <h1 class="post-title entry-title">NEO CASINOマイページメニュー</h1>
                         </div><!--/.page-title-->
                         <div class="pad group">
                             <article class="post-21 post type-post status-publish format-standard has-post-thumbnail hentry category-3">
@@ -23,8 +23,17 @@
                                     <p style="text-align:right;">いらっしゃいませ。{$user.nickname}さん<br />
                                     {*前回ログイン：2016年4月30日15:43:26*}
                                     </p>
+                                    <div class="mypage_cm">
+                                        <img src="{'/'|base_url}images/mypage_cm1.jpg">
+                                    </div>
+                                    <div class="mypage_cm_pc">
+                                        <img src="{'/'|base_url}images/mypage_cm_pc1.jpg">
+                                    </div>
                                     <div class="entry-inner clearfix">
-                                        <div style="text-align:center;"><a href="{$link_to_play}"><img src="{'/'|base_url}images/baccarat_play_btn.png" /></a></div>
+                                        <div class="play_btns cf">
+                                            <div class="play_btns_l" style="text-align:center;"><a href="{$link_to_play}"><img src="{'/'|base_url}images/baccarat_play_btn.png" /></a></div>
+                                            <div class="play_btns_r" style="text-align:center;"><a href="{'/'|base_url}top/playapi"><img src="images/play_btn.png" /></a></div>
+                                        </div>
                                         <h2 class="neteller_h2">操作メニュー</h2>
                                         <div class="mypage_menu cf">
                                             <div class="mypage_menu_btn_box"><a href="{'/'|base_url}payment/"><img src="{'/'|base_url}images/coincharge_btn.png"></a></div>

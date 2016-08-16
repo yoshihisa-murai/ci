@@ -15,6 +15,16 @@ class Top extends MY_Controller {
         parent::__construct();
         // モデルロード
         $this->load->model( 'Gamemoneylog' );
+        $params['public_key'] = '7b2bc08226811a42cbd5e70762aac5b7';
+        $params['secret_key'] = '1b5515594819ffe711c3f9ae53e803d8';
+        $params['meta'] = array(
+                'client_id' => 'ModuleTest',
+                'client_username' => 'ModuleTest',
+                'fallback_url' => 'nihtanapp://',
+                'receiver_url' => 'http://test.planx.jp/casino/top' 
+        );
+
+        $this->load->library( 'MY_nihtanApi', $params );
     }
 
     // }}}
@@ -40,14 +50,15 @@ class Top extends MY_Controller {
 
     // }}}
 
-    // {{{ public function logout()
+    // {{{ public function playapi()
     /**
-     * ログアウト
+     * API起動(ゲーム起動用)
      */
-    public function logout()
+    public function playapi()
     {
-        $this->session->sess_destroy();
-        redirect( 'top' );
+        $transfer_amount = 0;
+        $transfer_method = 'cash_in';
+        $this->my_nihtanapi->transfer_money_then_redirect( $transfer_amount, $transfer_method, 'test1234' );
     }
 
     // }}}

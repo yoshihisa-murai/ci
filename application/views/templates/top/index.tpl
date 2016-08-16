@@ -60,9 +60,11 @@
             <div class="login_block cf">
                 <div class="login_b_l"><a href="{'/'|base_url}signup/"><img src="{'/'|base_url}images/regist_btn2.png"></a></div><div class="login_b_r"><img id="trigger-overlay" src="{'/'|base_url}images/login_btn2.png"></div>
             </div>
+            <!--
             <div class="login_block_sp cf">
-                <div class="login_b_l"><a href="{'/'|base_url}signup/"><img src="{'/'|base_url}images/regist_btnsp2.png"></a></div><div class="login_b_r"><img id="trigger-overlay" src="{'/'|base_url}images/login_btnsp2.png"></div>
+                <div class="login_b_l"><a href="{'/'|base_url}signup/"><img class="top_img_regist_sp" src="{'/'|base_url}images/regist_btnsp2.png"></a></div><div class="login_b_r"><img id="trigger-overlay" src="{'/'|base_url}images/login_btnsp2.png"></div>
             </div>
+            -->
             <h2 class="top_h2">ネオカジノのゲーム</h2>
             <div class="top_game">
                 <ul class="top_ul cf">

@@ -47,16 +47,16 @@
                                                 <th>email</th><td>{$user.user_email}</td>
                                             </tr>
                                             <tr>
-                                                <th>性別</th><td>{$user.sex}</td>
+                                                <th>性別</th><td>{$config['sex'][$user.sex]}</td>
                                             </tr>
                                             <tr>
-                                                <th>言語種別</th><td>{$user.language}</td>
+                                                <th>言語種別</th><td>{$config['use_language'][$user.language]}</td>
                                             </tr>
                                             <tr>
-                                                <th>通貨種別</th><td>{$user.currency_unit}</td>
+                                                <th>通貨種別</th><td>{$config['currency_unit'][$user.currency_unit]}</td>
                                             </tr>
                                             <tr>
-                                                <th>国</th><td>{$user.country}</td>
+                                                <th>国</th><td>{$config['country'][$user.country]}</td>
                                             </tr>
                                             <tr>
                                                 <th>携帯番号</th><td>(+81){$user.phone_number}</td>

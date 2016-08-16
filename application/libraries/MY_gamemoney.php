@@ -31,9 +31,9 @@ class MY_gamemoney {
             'user_id'     => $user_id,
             'user_email'  => $user['user_email'],
             'nickname'    => $user['nickname'],
-            'category'    => $user['category'],
-            'num'         => $user['num'],
-            'remain'      => $user['remain'],
+            'category'    => 0,
+            'num'         => 0,
+            'remain'      => 0,
             'reason'      => my_const::LOG_REASON_FIRST,
             'insert_date' => date( 'Y-m-d H:i:s' ),
         );
