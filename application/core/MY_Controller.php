@@ -10,6 +10,7 @@ class MY_Controller extends CI_Controller {
     protected $_session;
     protected $_config;
     protected $_is_login;
+    //public $_params;
 
     // }}}
 
@@ -25,6 +26,7 @@ class MY_Controller extends CI_Controller {
         $this->smarty->compile_dir  = APPPATH . 'views/templates_c';
 //        $this->template = 'layout.tpl';
         $this->_config =& get_config(); 
+        //$this->_params = array(        );
 
         $this->_session = $this->session->get_userdata();
         // ログイン処理

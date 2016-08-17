@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Top extends MY_Controller {
 
+    //private $_params;
     // {{{ public function __construct()
     /**
      * コンストラクタ
@@ -24,6 +25,7 @@ class Top extends MY_Controller {
                 'receiver_url' => 'http://test.planx.jp/casino/top' 
         );
 
+        //var_dump($this->_params);
         $this->load->library( 'MY_nihtanApi', $params );
     }
 

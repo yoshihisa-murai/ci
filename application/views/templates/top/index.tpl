@@ -5,55 +5,17 @@
 
     <div class="container container_bg" id="page">
         <div id="head_space" class="clearfix"> 
-            <div class="flexslider" id="flexslider-featured">
-                <script>
-                {literal}
-                jQuery(document).ready(function(){
-                    var firstImage = jQuery('#flexslider-featured').find('img').filter(':first'),
-                    checkforloaded = setInterval(function() {
-                        var image = firstImage.get(0);
-                        if (image.complete || image.readyState == 'complete' || image.readyState == 4) {
-                            clearInterval(checkforloaded);
-                            jQuery('#flexslider-featured').flexslider({
-                                animation: 'fade',
-                                useCSS: false, // Fix iPad flickering issue
-                                slideshow: true,
-                                easing: 'swing',
-                                directionNav: true,
-                                controlNav: true,
-                                pauseOnHover: true,
-                                slideshowSpeed: 7000,
-                                animationSpeed: 600,
-                                smoothHeight: true,
-                                touch: true});
-                        }
-                    }, 20);
-                });
-                {/literal}
-                </script>
-                <!--#loading-->
-                <div id="loading">
-                    <div class="loader"></div>
-                </div>
-                <!--#loading-->
-                <ul class="slides">
-                    <li>
-                        <div class="feature_meta">
-                            <h2 class="fadeInDown wow" data-wow-delay="0.3s"></h2>
-                            <div class="feature_description fadeInUp wow" data-wow-delay="0.5s"></div>
-                        </div>
-                        <div id="toppc" class="slider_image img-liquid"> 
-                            <div class="overlayer"></div>
-                            <img src="{'/'|base_url}images/topbana.jpg" alt="" title="" />
-                        </div>
-                        <div id="topsp" class="slider_image img-liquid"> 
-                            <div class="overlayer"></div>
-                            <img src="{'/'|base_url}images/topbana_sp.jpg" alt="" title="" />
-                        </div>
-                    </li>
-                </ul>
+            <!--#loading-->
+            <div id="loading">
+                <div class="loader"></div>
             </div>
-            <!--/.featured-->
+            <!--#loading-->
+            <div id="toppc"> 
+                <img src="{'/'|base_url}images/topbana.jpg" alt="" title="" />
+            </div>
+            <div id="topsp"> 
+                <img src="{'/'|base_url}images/topbana_sp.jpg" alt="" title="" />
+            </div>
         </div>
 
         <div class="container-inner container-inner2 freespace-pad">
@@ -65,6 +27,7 @@
                 <div class="login_b_l"><a href="{'/'|base_url}signup/"><img class="top_img_regist_sp" src="{'/'|base_url}images/regist_btnsp2.png"></a></div><div class="login_b_r"><img id="trigger-overlay" src="{'/'|base_url}images/login_btnsp2.png"></div>
             </div>
             -->
+            <div class="top_aboutus"><a href="{'/'|base_url}overall/aboutus/"><img src="{'/'|base_url}images/aboutus_btn.png"></div>
             <h2 class="top_h2">ネオカジノのゲーム</h2>
             <div class="top_game">
                 <ul class="top_ul cf">

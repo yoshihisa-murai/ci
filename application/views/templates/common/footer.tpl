@@ -3,7 +3,7 @@
             <div class="container-inner">
                 <div class="pad group">
                     <div class="content_all cf">
-                        <div class="content_l">
+                        <div class="content_l footer_sp">
                             <img src="{'/'|base_url}images/licence.png" />
                         </div>
                         <div class="content_l">

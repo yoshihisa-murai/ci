@@ -30,6 +30,7 @@ $config['neteller']['payout']     = 'NETELLER出金方法';
 $config['agreement']['index']     = 'エンドユーザー同意書';
 $config['errors']['error_404']    = 'エラー';
 $config['callcenter']['index']    = 'お問い合わせ';
+$config['overall']['aboutus']    = 'NEO CASINOとは';
 
 /**
  * Local variables:

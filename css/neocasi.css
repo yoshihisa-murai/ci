@@ -210,13 +210,42 @@ strong.lose
 {
 	color:#fff;
 	font-size:24px;
-	margin-top:20px;
+	margin-top:40px;
 	font-weight:bold;
 	text-align:center;
+	margin-bottom:10px;
 }
+
+.subpage_h1
+{
+	margin:20px 20px 40px;
+	color:#fff;
+	font-size:30px;
+	font-weight:bold;
+}
+
+.main_block
+{
+	padding:0 20px 20px;
+	color:#fff;
+}
+
+.subpage_h2
+{
+	font-size:20px;
+	font-weight:bold;
+	margin:40px 0 20px;
+}
+
+.top_aboutus
+{
+	margin-top:10px;
+	text-align:center;
+}
+
 	
 
-@media only screen and (min-width: 769px)
+@media only screen and (min-width: 1025px)
 {
 	#topsp{display:none;}
 	.content_all
@@ -324,7 +353,134 @@ strong.lose
 		padding-right:10px;
 		box-sizing:border-box;
 	}
+
+	.footer_sp
+	{
+		margin-bottom:10px;
+	}
+
+	.aboutus_2block p, .aboutus_nihtan_logo
+	{
+		float:left;
+	}
 	
+	.aboutus_nihtan_logo
+	{
+		max-width:30%;
+		padding-right:10px;
+		box-sizing:border-box;
+	}
+
+	.aboutus_2block p
+	{
+		width:70%;
+	}
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px)
+{
+	#topsp{display:none;}
+	.sp_top1
+	{
+		margin-top:20px;
+	}
+	
+	.up_margin
+	{
+		margin-top:-80px;
+	}
+
+	.neteller_box
+	{
+		margin-top:100px;
+	}
+	.info_textarea
+	{
+		width:250px;
+		height:250px;
+	}
+
+	.top_ul
+	{
+		width:100%
+	}
+	.top_ul li
+	{
+		width:50%;
+	}
+	
+	.sp_margin_bottom20
+	{
+		margin-bottom:20px;
+	}
+
+	.content_l
+	{
+		width:50%;
+		box-sizing:border-box;
+		padding:0 10px;
+		float:left;
+	}
+/*
+	
+	.login_block
+	{
+		display:none;
+	}
+	.login_block_sp
+	{
+		text-align:center;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	.login_block_sp img
+	{
+		
+	}
+	
+	.login_b_l
+	{
+		width:50%;
+	}
+	
+	.login_b_r
+	{
+		width:50%;
+	}
+*/
+	.top_game
+	{
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+
+	.mypage_cm
+	{
+		margin-bottom:10px;
+	}
+	
+	.mypage_cm_pc
+	{
+		display:none;
+	}
+
+	.aboutus_2block p, .aboutus_nihtan_logo
+	{
+		float:left;
+	}
+	
+	.aboutus_nihtan_logo
+	{
+		max-width:30%;
+		padding-right:10px;
+		box-sizing:border-box;
+	}
+
+	.aboutus_2block p
+	{
+		width:70%;
+	}
 }
 
 @media only screen and (max-width: 768px)
@@ -407,6 +563,20 @@ strong.lose
 	{
 		display:none;
 	}
+
+	.subpage_h1
+	{
+		margin:20px 20px 40px;
+		color:#fff;
+		font-size:24px;
+		font-weight:bold;
+	}
+	
+	.aboutus_nihtan_logo
+	{
+		margin-bottom:20px;
+		text-align:center;
+	}
 }
 
 @media screen and (max-width:640px)
@@ -450,6 +620,11 @@ strong.lose
 	.sp_margin_bottom20
 	{
 		margin-bottom:20px;
+	}
+
+	.footer_sp
+	{
+		margin-bottom:10px;
 	}
 
 /*
