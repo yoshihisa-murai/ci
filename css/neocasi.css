@@ -10,6 +10,18 @@
 	visibility:hidden;
 }
 
+a:link
+{
+	color:#fcc609;
+	text-decoration:underline;
+}
+
+a:visited
+{
+	color:#fcc609;
+	text-decoration:underline;
+}
+
 img{
 max-width: 100%;
 height: auto;
@@ -237,13 +249,60 @@ strong.lose
 	margin:40px 0 20px;
 }
 
+.subpage_h3
+{
+	font-size:16px;
+	font-weight:bold;
+	margin-top:40px;
+	margin-bottom:10px;
+	color:#75b5fe;
+}
+
 .top_aboutus
 {
 	margin-top:10px;
 	text-align:center;
 }
 
-	
+.appinstall_guide
+{
+	width:40%;
+	margin:20px auto 0;
+}
+
+.appinstall_android, .appinstall_ios
+{
+	width:50%;
+	float:left;
+}
+
+.appinstall_android
+{
+	padding-right:10px;
+	box-sizing:border-box;
+}
+
+.appinstall_ios
+{
+	padding-left:10px;
+	box-sizing:border-box;
+}
+
+.appinstall_ios p, .appinstall_android p
+{
+	text-align:center;
+}
+
+.appinstall_ios a:link, .appinstall_android a:link
+{
+	color:#fcc609;
+	text-decoration:underline;
+}
+
+.appinstall_p_end
+{
+	margin-top:30px;
+}
 
 @media only screen and (min-width: 1025px)
 {
@@ -375,6 +434,14 @@ strong.lose
 	{
 		width:70%;
 	}
+
+	.subpage_h1
+	{
+		margin:20px 20px 40px;
+		color:#fff;
+		font-size:30px;
+		font-weight:bold;
+	}
 }
 
 @media only screen and (min-width:769px) and (max-width:1024px)
@@ -481,12 +548,29 @@ strong.lose
 	{
 		width:70%;
 	}
+
+	.lanking_title
+	{
+		text-align:center;
+	}
+
+	.subpage_h1
+	{
+		margin:20px 20px 40px;
+		color:#fff;
+		font-size:24px;
+		font-weight:bold;
+	}
+
+	.image-block
+	{
+		margin:60px 0;
+	}
 }
 
 @media only screen and (max-width: 768px)
 {
 	#toppc{display:none;}
-	#topsp{height:647px;}
 	.sp_top1
 	{
 		margin-top:20px;
@@ -577,12 +661,50 @@ strong.lose
 		margin-bottom:20px;
 		text-align:center;
 	}
+
+	.lanking_title
+	{
+		text-align:center;
+	}
+
+	.appinstall_guide
+	{
+		width:70%;
+		margin:20px auto 0;
+	}
+
+	.appinstall_android, .appinstall_ios
+	{
+		width:50%;
+		float:left;
+	}
+
+	.appinstall_android
+	{
+		padding-right:10px;
+		box-sizing:border-box;
+	}
+
+	.appinstall_ios
+	{
+		padding-left:10px;
+		box-sizing:border-box;
+	}
+
+	.appinstall_ios p, .appinstall_android p
+	{
+		text-align:center;
+	}
+
+	.image-block
+	{
+		margin:60px 0;
+	}
 }
 
 @media screen and (max-width:640px)
 {
 	#toppc{display:none;}
-	#topsp{height:647px;}
 	.sp_top1
 	{
 		margin-top:20px;
@@ -670,6 +792,53 @@ strong.lose
 	.mypage_cm_pc
 	{
 		display:none;
+	}
+
+	.lanking_title
+	{
+		text-align:center;
+	}
+
+	.appinstall_guide
+	{
+		width:70%;
+		margin:20px auto 0;
+	}
+
+	.appinstall_android, .appinstall_ios
+	{
+		width:50%;
+		float:left;
+	}
+
+	.appinstall_android
+	{
+		padding-right:10px;
+		box-sizing:border-box;
+	}
+
+	.appinstall_ios
+	{
+		padding-left:10px;
+		box-sizing:border-box;
+	}
+
+	.appinstall_ios p, .appinstall_android p
+	{
+		text-align:center;
+	}
+
+	.subpage_h1
+	{
+		margin:20px 20px 40px;
+		color:#fff;
+		font-size:24px;
+		font-weight:bold;
+	}
+	
+	.image-block
+	{
+		margin:60px 0;
 	}
 
 }

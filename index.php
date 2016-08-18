@@ -55,7 +55,6 @@
  */
 //	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 	define('ENVIRONMENT', ($_SERVER['HTTP_HOST'] !== 'test.planx.jp') ? 'production' : 'development');
-//	define('ENVIRONMENT', ($_SERVER['HTTP_HOST'] === 'test.planx.jp') ? 'production' : 'development');
 
 /*
  *---------------------------------------------------------------

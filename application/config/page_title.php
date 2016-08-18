@@ -31,7 +31,8 @@ $config['agreement']['index']     = 'エンドユーザー同意書';
 $config['errors']['error_404']    = 'エラー';
 $config['callcenter']['index']    = 'お問い合わせ';
 $config['overall']['aboutus']    = 'NEO CASINOとは';
-
+$config['guide']['appinstall']    = '泥炭-Nihtan-のインストール方法';
+$config['guide']['startup']    = '泥炭-Nihtan-の起動';
 /**
  * Local variables:
  * tab-width: 4

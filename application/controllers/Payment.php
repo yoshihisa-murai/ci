@@ -18,10 +18,10 @@ class Payment extends MY_Controller {
         // モデルロード
         $this->load->model( 'Gamemoneylog' );
         $this->_params['meta'] = array(
-            'client_id' => 'ModuleTestID0001',
+            'client_id' => 'ModuleTest',
             'client_username' => 'ModuleTest',
             'fallback_url' => '',
-            'receiver_url' => ''
+            'receiver_url' => 'http://test.planx.jp/casino/top' 
         );
         $this->load->library( 'MY_nihtanApi', $this->_params );
         if ( ! $this->my_user->is_login() ) {
