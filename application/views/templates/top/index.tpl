@@ -27,7 +27,7 @@
                 <div class="login_b_l"><a href="{'/'|base_url}signup/"><img class="top_img_regist_sp" src="{'/'|base_url}images/regist_btnsp2.png"></a></div><div class="login_b_r"><img id="trigger-overlay" src="{'/'|base_url}images/login_btnsp2.png"></div>
             </div>
             -->
-           <div class="top_aboutus"><a href="{'/'|base_url}overall/aboutus/"><img src="{'/'|base_url}images/aboutus_btn.png"></div>
+           <div class="top_aboutus"><a href="{'/'|base_url}overall/aboutus/"><img src="{'/'|base_url}images/aboutus_btn.png"></a></div>
             <h2 class="top_h2">ネオカジノのゲーム</h2>
             <div class="top_game">
                 <ul class="top_ul cf">
@@ -106,7 +106,7 @@
                     <li>パスワード：{form_password( 'password' )}</li>
                 </ul>
                 <p style="text-align:center;"><input class="login_btn" type="submit" name="login_submit" value="ログイン" />{*form_submit( 'submit', 'ログイン' )*}</p>
-                <p style="margin-top:10px;">アカウントをお持ちでない場合は<a href="{'/'|base_url}signup/sp">登録へ</a></p>
+                <p style="margin-top:10px;">アカウントをお持ちでない場合は<a href="{'/'|base_url}signup/">登録へ</a></p>
         {form_close()}
             </form>
         </div>

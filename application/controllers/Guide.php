@@ -13,6 +13,9 @@ class Guide extends MY_Controller {
     public function __construct() 
     {
         parent::__construct();
+        if ( ! $this->my_user->is_login() ) {
+            redirect( 'top' );
+        }
     }
     // }}}
 

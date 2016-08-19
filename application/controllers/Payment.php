@@ -20,7 +20,7 @@ class Payment extends MY_Controller {
         $this->_params['meta'] = array(
             'client_id' => 'ModuleTest',
             'client_username' => 'ModuleTest',
-            'fallback_url' => '',
+            'fallback_url' => 'http://test.planx.jp/casino/payment/complete',
             'receiver_url' => 'http://test.planx.jp/casino/top' 
         );
         $this->load->library( 'MY_nihtanApi', $this->_params );

@@ -56,6 +56,7 @@ class Gamemoneylog extends CI_Model {
     public function getByUserIdList( $user_id, $start, $num ) {
         $this->db->where( 'user_id', $user_id );
         $this->db->order_by( 'insert_date', 'desc' );
+        $this->db->order_by( 'category', 'asc' );
         $this->db->limit( $num, $start );
         $query = $this->db->get( $this->_table );
         $res = array();
