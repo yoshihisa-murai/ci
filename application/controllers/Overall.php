@@ -14,7 +14,6 @@ class Overall extends MY_Controller {
     {
         parent::__construct();
     }
-
     // }}}
 
     // {{{ public function aboutus()
@@ -25,7 +24,46 @@ class Overall extends MY_Controller {
     {
         $this->view( __FUNCTION__ );
     }
+    // }}}
 
+    // {{{ public function baccarat()
+    /**
+     * バカラページ
+     */
+    public function baccarat()
+    {
+        $this->view( __FUNCTION__ );
+    }
+    // }}}
+
+    // {{{ public function poker()
+    /**
+     * ポーカーページ
+     */
+    public function poker()
+    {
+        $this->view( __FUNCTION__ );
+    }
+    // }}}
+
+    // {{{ public function sicbo()
+    /**
+     * シックボーページ
+     */
+    public function sicbo()
+    {
+        $this->view( __FUNCTION__ );
+    }
+    // }}}
+
+    // {{{ public function toto()
+    /**
+     * TOTOページ
+     */
+    public function toto()
+    {
+        $this->view( __FUNCTION__ );
+    }
     // }}}
 }
 /**

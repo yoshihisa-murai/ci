@@ -31,10 +31,10 @@
             <h2 class="top_h2">ネオカジノのゲーム</h2>
             <div class="top_game">
                 <ul class="top_ul cf">
-                	<li><a href="#"><img src="{'/'|base_url}images/top_baccarat.jpg"></a></li>
-					<li><a href="#"><img src="{'/'|base_url}images/top_poker.jpg"></a></li>
-					<li><a href="#"><img src="{'/'|base_url}images/top_sicbo.jpg"></a></li>
-					<li><a href="#"><img src="{'/'|base_url}images/top_toto.jpg"></a></li>
+                	<li><a href="{'/'|base_url}overall/baccarat"><img src="{'/'|base_url}images/top_baccarat.jpg"></a></li>
+					<li><a href="{'/'|base_url}overall/poker"><img src="{'/'|base_url}images/top_poker.jpg"></a></li>
+					<li><a href="{'/'|base_url}overall/sicbo"><img src="{'/'|base_url}images/top_sicbo.jpg"></a></li>
+					<li><a href="{'/'|base_url}overall/toto"><img src="{'/'|base_url}images/top_toto.jpg"></a></li>
                 </ul>
             </div>
             <div class="content_all cf">

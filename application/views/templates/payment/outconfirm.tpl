@@ -36,7 +36,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>NETELLER ID</th>
+                                                    <th>i-wallet ID</th>
                                                     <td>
                                                         {$post.neteller_id}
                                                     </td>

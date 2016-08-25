@@ -31,7 +31,7 @@
                                                     <th style="width:50%;">入金金額(USD)</th><td style="border-top:1px solid #fff; width:50%; text-align:left;">${$post.pay_number|number_format}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>NETELLER ID</th><td style="text-align:left;">{$post.neteller_id}</td>
+                                                    <th>i-wallet ID</th><td style="text-align:left;">{$post.neteller_id}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>PASSWORD</th><td style="text-align:left;">非表示</td>

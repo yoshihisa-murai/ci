@@ -31,6 +31,10 @@ $config['agreement']['index']     = 'エンドユーザー同意書';
 $config['errors']['error_404']    = 'エラー';
 $config['callcenter']['index']    = 'お問い合わせ';
 $config['overall']['aboutus']    = 'NEO CASINOとは';
+$config['overall']['baccarat']    = 'ネオカジノ「バカラ」のご紹介';
+$config['overall']['poker']    = 'ネオカジノ「ポーカー」のご紹介';
+$config['overall']['sicbo']    = 'ネオカジノ「シックボー」のご紹介';
+$config['overall']['toto']    = 'ネオカジノ「toto」のご紹介';
 $config['guide']['appinstall']    = '泥炭-Nihtan-のインストール方法';
 $config['guide']['startup']    = '泥炭-Nihtan-の起動';
 /**

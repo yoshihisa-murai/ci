@@ -36,7 +36,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>NETELLER ID</th>
+                                                    <th>i-wallet ID</th>
                                                     <td>
                                                     {form_input( 'neteller_id' )}
                                                     <br />アカウントIDまたはメールアドレス(ご本人様名義のみ利用可)
