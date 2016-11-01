@@ -36,7 +36,11 @@ $config['overall']['poker']    = 'ネオカジノ「ポーカー」のご紹介'
 $config['overall']['sicbo']    = 'ネオカジノ「シックボー」のご紹介';
 $config['overall']['toto']    = 'ネオカジノ「toto」のご紹介';
 $config['guide']['appinstall']    = '泥炭-Nihtan-のインストール方法';
-$config['guide']['startup']    = '泥炭-Nihtan-の起動';
+$config['guide']['startup']	=	'泥炭-Nihtan-の起動';
+$config['iwallet']['index']	=	'iwalletメニュー';
+$config['iwallet']['regist']    = 'iwallet口座開設';
+$config['iwallet']['authority']  = 'iwallet本人確認の方法';
+$config['iwallet']['card']  = 'iwalletカードの作成方法';
 /**
  * Local variables:
  * tab-width: 4
